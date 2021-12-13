@@ -22,4 +22,4 @@ Tests:
 """
 
 # bool: with value True
-result = ...
+result = True

@@ -19,3 +19,5 @@ Tests:
     >>> assert '# This is my first Python script' in result, \
     'Please write proper line comment'
 """
+
+# This is my first Python script
