@@ -4,6 +4,7 @@
 * Complexity: easy
 * Lines of code: 1 lines
 * Time: 3 min
+*ghfhfghff
 
 English:
     1. Use list comprehension
