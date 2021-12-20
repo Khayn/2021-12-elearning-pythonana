@@ -32,4 +32,4 @@ Tests:
 """
 
 # list[int]: numbers from 5 to 20 (without 20)
-result = ...
+result = [x for x in range(5, 20)]

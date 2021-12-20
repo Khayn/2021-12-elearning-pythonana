@@ -57,10 +57,13 @@ Tests:
      '11': 'November',
      '12': 'December'}
 """
+from Tools.scripts.make_ctype import values
 
 MONTHS = ['January', 'February', 'March', 'April',
           'May', 'June', 'July', 'August', 'September',
           'October', 'November', 'December']
 
 # dict[str,str]: with zero-padded number and month name
-result = ...
+result = {f'{k + 1:02}': v
+          for k, v in enumerate(MONTHS)}
+
