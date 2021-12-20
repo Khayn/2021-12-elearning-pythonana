@@ -3,7 +3,7 @@
 * Required: yes
 * Complexity: easy
 * Lines of code: 9 lines
-* Time: 5 min
+* Time: 5 mintyytjyj
 
 English:
     1. What you need to put in expressions to get the expected outcome?
