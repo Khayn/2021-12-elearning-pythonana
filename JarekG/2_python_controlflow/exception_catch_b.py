@@ -45,4 +45,9 @@ ADULT = 18
 
 
 def result(age):
-    ...
+    try:
+        age = float(age)
+    except ValueError:
+        raise TypeError()
+    if age < ADULT:
+        raise PermissionError()

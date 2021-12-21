@@ -50,4 +50,5 @@ REQUIRED_VERSION = (3, 7)
 
 
 def result(version):
-    ...
+    major, minor, *_ = version
+    assert major >= 3 and minor >= 7, "Python 3.7+ required"

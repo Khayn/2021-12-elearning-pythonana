@@ -1,0 +1,169 @@
+1_python_types
+--------------
+	Mapping Define Dict - mapping_define_a.py
+	Mapping Generate Enumerate - mapping_generate_b.py
+	Mapping Generate Pairs - mapping_generate_a.py
+	Mapping Generate Zip - mapping_generate_c.py
+	Mapping Items List - mapping_items_a.py
+	Mapping Switch Default - mapping_switch_b.py
+	Mapping Switch Value - mapping_switch_a.py
+	Sequence GetItem Header - sequence_getitem_a.py
+	Sequence GetItem Header/Data - sequence_getitem_e.py
+	Sequence GetItem Negative - sequence_getitem_c.py
+	Sequence GetItem Positive - sequence_getitem_b.py
+	Sequence GetItem Select - sequence_getitem_d.py
+	Sequence List Create - sequence_list_a.py
+	Sequence List Many - sequence_list_b.py
+	Sequence List Modify - sequence_list_c.py
+	Sequence Nested Create - sequence_nested_a.py
+	Sequence Set Create - sequence_set_a.py
+	Sequence Set Many - sequence_set_b.py
+	Sequence Slice Header/Data - sequence_slice_d.py
+	Sequence Slice Sequence - sequence_slice_c.py
+	Sequence Slice Substr - sequence_slice_b.py
+	Sequence Slice Text - sequence_slice_a.py
+	Sequence Slice Train/Test - sequence_slice_e.py
+	Sequence Tuple Create - sequence_tuple_a.py
+	Sequence Tuple Mean - sequence_tuple_c.py
+	Sequence Tuple Select - sequence_tuple_b.py
+	Sequence UnpackAssignment List - sequence_unpack_a.py
+	Sequence UnpackAssignment Split - sequence_unpack_b.py
+	Sequence UnpackStar List - sequence_star_a.py
+	Sequence UnpackStar Nested - sequence_star_c.py
+	Sequence UnpackStar Split - sequence_star_b.py
+	String Clean Strings - type_strclean_a.py
+	String Define HelloWorld - type_strdefine_a.py
+	String Define Quotes - type_strdefine_b.py
+	String Input Prompt - type_strinput_a.py
+	String Literals Emoticon - type_strliterals_a.py
+	String Methods Join - type_strmethods_b.py
+	String Methods Normalize - type_strmethods_c.py
+	String Methods Splitlines - type_strmethods_a.py
+	Syntax Comments Inline - syntax_comments_c.py
+	Syntax Comments Line - syntax_comments_a.py
+	Syntax Comments Multiline - syntax_comments_b.py
+	Syntax Print Interpolation - syntax_print_b.py
+	Syntax Print Newline - syntax_print_a.py
+	Syntax Variables Bool - syntax_assignment_d.py
+	Syntax Variables Float - syntax_assignment_b.py
+	Syntax Variables Int - syntax_assignment_a.py
+	Syntax Variables None - syntax_assignment_e.py
+	Syntax Variables Str - syntax_assignment_c.py
+	Type Bool Simple - type_bool_b.py
+	Type Bool True or False - type_bool_a.py
+	Type Float Altitude - type_float_b.py
+	Type Float Distance - type_float_d.py
+	Type Float Gradient - type_float_h.py
+	Type Float Percent - type_float_g.py
+	Type Float Pressure - type_float_f.py
+	Type Float Tax - type_float_a.py
+	Type Float Velocity - type_float_e.py
+	Type Float Volume - type_float_c.py
+	Type Int Add - type_int_a.py
+	Type Int Bandwidth - type_int_h.py
+	Type Int Bits - type_int_f.py
+	Type Int Bytes - type_int_g.py
+	Type Int Mul - type_int_c.py
+	Type Int Sub - type_int_b.py
+	Type Int Time - type_int_e.py
+	Type Int Truediv - type_int_d.py
+	Type None - type_none_a.py
+
+
+2_python_controlflow
+--------------------
+	Comprehension About Create - comprehension_about_a.py
+	Comprehension Dict Months - comprehension_dict_a.py
+	Comprehension Dict Reverse - comprehension_dict_c.py
+	Comprehension Dict ZeroPadded - comprehension_dict_b.py
+	Comprehension Filter Even - comprehension_filter_a.py
+	Comprehension List Split - comprehension_list_b.py
+	Comprehension List Translate - comprehension_list_a.py
+	Comprehension Nested Dict - comprehension_nested_a.py
+	Conditional BooleanAlgebra BloodPressure - conditional_booleanalgebra_a.py
+	Conditional Expression IPv4/IPv6 - conditional_expression_b.py
+	Conditional Expression Underage/Adult - conditional_expression_a.py
+	Conditional If IPv4/IPv6 - conditional_else_b.py
+	Conditional If Underage/Adult - conditional_else_a.py
+	Conditional Operator Modulo - conditional_operator_a.py
+	Exception Assert Version - exception_assert_a.py
+	Exception Catch Else - exception_catch_b.py
+	Exception Catch Except - exception_catch_a.py
+	Exception Catch Finally - exception_catch_c.py
+	Exception Custom Exception - exception_custom_a.py
+	Exception Raise Many - exception_raise_b.py
+	Exception Raise One - exception_raise_a.py
+	File Path Abspath - file_path_b.py
+	File Path Exception - file_path_a.py
+	File Read CSV - file_read_c.py
+	File Read CleanFile - file_read_d.py
+	File Read DirtyFile - file_read_e.py
+	File Read List of Dicts - file_read_f.py
+	File Read Multiline - file_read_b.py
+	File Read Passwd - file_read_g.py
+	File Read Str - file_read_a.py
+	File Write CSV - file_write_f.py
+	File Write Iris - file_write_e.py
+	File Write List - file_write_c.py
+	File Write Multiline - file_write_b.py
+	File Write Non-Str - file_write_d.py
+	File Write Str - file_write_a.py
+	Function Arguments Clean - function_args_e.py
+	Function Arguments Divide - function_args_b.py
+	Function Arguments Num2Str - function_args_f.py
+	Function Arguments Power - function_args_c.py
+	Function Arguments Range - function_args_g.py
+	Function Arguments Sequence - function_args_a.py
+	Function Arguments Translate - function_args_d.py
+	Function Definition Print - function_definition_a.py
+	Function Generator Chain - function_generators_a.py
+	Function Lambda Chain - function_lambda_a.py
+	Function Parameters Default - function_parameters_c.py
+	Function Parameters Echo - function_parameters_b.py
+	Function Parameters Sequence - function_parameters_a.py
+	Function Recurrence Fibonacci - function_recurrence_a.py
+	Function Return Numbers - function_return_a.py
+	Function Scope Global - function_scope_a.py
+	Loop Dict Label Encoder - loop_dict_d.py
+	Loop Dict Reverse - loop_dict_c.py
+	Loop Dict To Dict - loop_dict_a.py
+	Loop Dict To List - loop_dict_b.py
+	Loop For Count - loop_for_a.py
+	Loop For Counter - loop_for_b.py
+	Loop For Months - loop_for_f.py
+	Loop For Newline - loop_for_d.py
+	Loop For Segmentation - loop_for_c.py
+	Loop For Text - loop_nested_c.py
+	Loop For Translate - loop_for_e.py
+	Loop Nested Mean - loop_nested_a.py
+	Loop Nested Unique Keys - loop_nested_b.py
+	Loop Unpacking Endswith - loop_unpacking_b.py
+	Loop Unpacking Months - loop_unpacking_a.py
+	Loop While GuessGame1 - loop_while_break_a.py
+	Loop While Input - loop_while_break_b.py
+	Loop While Translate - loop_while_about_c.py
+	Loop While to Float - loop_while_about_a.py
+	Loop While to Str - loop_while_about_b.py
+	Loop WhileElse Else - loop_while_else_b.py
+	Loop WhileElse Found - loop_while_else_a.py
+	OOP Attribute Model - oop_attribute_a.py
+	OOP Class Define A - oop_class_define_a.py
+	OOP Class Define B - oop_class_define_b.py
+	OOP Class Instance - oop_class_instance_b.py
+	OOP Class Iris - oop_class_instance_a.py
+	OOP Inheritance Simple - oop_inheritance_a.py
+	OOP InheritancePatterns Mixin - oop_inheritancepatterns_b.py
+	OOP InheritancePatterns Multilevel - oop_inheritancepatterns_a.py
+	OOP Init Model - oop_init_b.py
+	OOP Init Print - oop_init_a.py
+	OOP Method Call - oop_method_c.py
+	OOP Method Mean - oop_method_b.py
+	OOP Method Nested - oop_mthattr_b.py
+	OOP Method Sequence - oop_mthattr_a.py
+	OOP Method Syntax - oop_method_a.py
+	OOP Overload Super - oop_inheritancesuper_a.py
+	OOP Stringify Nested - oop_stringify_c.py
+	OOP Stringify Repr - oop_stringify_b.py
+	OOP Stringify Str - oop_stringify_a.py
+
+

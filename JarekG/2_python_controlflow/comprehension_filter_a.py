@@ -36,4 +36,4 @@ Tests:
 """
 
 # list[int]: even numbers from 5 to 20 (without 20)
-result = ...
+result = [x for x in range(5, 20) if x % 2 == 0]

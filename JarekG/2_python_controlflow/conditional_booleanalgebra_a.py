@@ -101,4 +101,25 @@ diastolic = int(diastolic)
 # | Hypertensive Crisis     | Higher than 180  | and/or   | Higher than 120   |
 
 # str: one of the STATUS_*
-result = ...
+
+
+def calc_result(pressure):
+    systolic, diastolic = pressure.split('/')
+    systolic = int(systolic)
+    diastolic = int(diastolic)
+    status = 'None'
+
+    if systolic < 120 and diastolic < 80:
+        status = STATUS_NORMAL
+    elif 120 < systolic < 129 and diastolic < 80:
+        status = STATUS_ELEVATED
+    elif 130 < systolic < 139 or 80 < diastolic < 90:
+        status = STATUS_HYPERTENSION_STAGE_1
+    elif systolic > 140 or diastolic > 90:
+        status = STATUS_HYPERTENSION_STAGE_2
+    else:
+        status = STATUS_HYPERTENSIVE_CRISIS
+    return status
+
+
+result = calc_result(input('Podaj ciśnienie krwi'))

@@ -48,7 +48,7 @@ from unittest.mock import MagicMock
 # Simulate user input (for test automation)
 input = MagicMock(side_effect=['4'])
 
-number = input('What is your number?: ')
+number = int(input('What is your number?: '))
 
 # bool: Whether input number is even or odd (modulo divide)
-result = ...
+result = bool(number != 0)

@@ -37,8 +37,8 @@ from unittest.mock import MagicMock
 input = MagicMock(side_effect=['21'])
 
 
-age = input('What is your age?: ')
+age = int(input('What is your age?: '))
 ADULT = 18
 
 # str: Whether 'Adult' or 'Young'
-result = ...
+result = "Adult" if age >= ADULT else "Young"

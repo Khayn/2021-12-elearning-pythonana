@@ -48,4 +48,4 @@ DATA = {
 }
 
 # dict[str,str]: converted DATA. Note values are str not int!
-result = ...
+result = {y: str(x) for x, l in DATA.items() for y in l}
