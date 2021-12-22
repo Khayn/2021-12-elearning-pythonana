@@ -27,4 +27,4 @@ Tests:
     'Do not change the value of the `alone_on_mars` variable.'
 """
 
-alone_on_mars = 'Mark Watney' # Space Pirate
+alone_on_mars = 'Mark Watney'

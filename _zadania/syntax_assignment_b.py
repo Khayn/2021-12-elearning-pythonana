@@ -22,4 +22,4 @@ Tests:
 """
 
 # int: with value 1.1
-result = 1.1
+result = ...
