@@ -1,4 +1,11 @@
 # Byte-compiled / optimized / DLL files
+
+_temporary.csv
+_temporary.txt
+etc-group.txt
+etc-passwd.txt
+etc-shadow.txt
+
 __pycache__/
 *.py[cod]
 *$py.class

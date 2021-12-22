@@ -64,4 +64,11 @@ with open(FILE, mode='w') as file:
     file.write(DATA)
 
 # dict[str,list[str]]: example {'10.13.37.1': ['nasa.gov', 'esa.int', 'roscosmos.ru'], ...}
-result = ...
+result = {}
+
+with open(FILE, mode='r') as f:
+    lines = f.readlines()
+
+for line in lines:
+    ip, *hosts = line.strip().split()
+    result.setdefault(ip, []).extend(hosts)

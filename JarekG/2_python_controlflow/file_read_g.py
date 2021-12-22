@@ -191,4 +191,42 @@ ALGORITHMS = {
 }
 
 # list[dict]: joined data from all files for users with `UID` greater than 1000
-result = ...
+
+result = []
+user_by_group = {}
+user_by_shadow ={}
+
+with open(FILE_GROUP, mode='r') as file:
+    for line in file:
+        line = line.strip()
+        if line.startswith('#') or line.startswith(' ') or len(line) == 0:
+            continue
+        group, *_, users = line.split(':')
+        for user in users.split(','):
+            if user:
+                user_by_group.setdefault(user, []).append(group)
+
+with open(FILE_SHADOW, mode='r') as file:
+    for line in file:
+        line = line.strip()
+        if line.startswith('#') or line.startswith(' ') or len(line) == 0:
+            continue
+        user, *features = line.split(':')
+        if user:
+            user_by_shadow.setdefault(user, []).extend(features)
+
+def parse_passwd(passwd):
+
+
+
+with open(FILE_PASSWD, mode='r') as file:
+    for line in file:
+        line = line.strip()
+        if line.startswith('#') or line.startswith(' ') or len(line) == 0:
+            continue
+        user, _, uid, gid, gecos, home, shell = line.split(':')
+        if int(gid) >= 1000:
+            shadow = user_by_shadow.get(user)
+            passwd, last_changed, _, _, _, _, time_disable = shadow
+            groups = user_by_group.get(user)
+

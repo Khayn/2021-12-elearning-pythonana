@@ -54,4 +54,9 @@ ADULT = 18
 
 
 def result(age):
-    ...
+    if not isinstance(age, (int, float)) or isinstance(age, bool):
+        raise TypeError()
+    if age < 0:
+        raise ValueError()
+    if age < ADULT:
+        raise PermissionError()

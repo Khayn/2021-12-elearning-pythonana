@@ -39,4 +39,5 @@ with open(FILE, mode='wt') as file:
     file.write(DATA)
 
 # str: FILE content
-result = ...
+with open(FILE) as f:
+    result = f.read()
