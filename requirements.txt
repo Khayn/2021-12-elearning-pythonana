@@ -1,0 +1,7 @@
+numpy
+pandas
+matplotlib
+xlrd
+requests
+lxml
+html5lib
