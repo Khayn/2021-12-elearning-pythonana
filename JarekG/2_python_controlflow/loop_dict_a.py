@@ -41,4 +41,8 @@ DATA = {
 }
 
 # dict[str,str]: converted DATA. Note values are str not int!
-result = ...
+result = {
+    k: str(v)
+    for v, v_list in DATA.items()
+    for k in v_list
+}

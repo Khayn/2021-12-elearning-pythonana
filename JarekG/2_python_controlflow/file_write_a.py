@@ -30,3 +30,6 @@ Tests:
 
 FILE = '_temporary.txt'
 DATA = 'hello world'
+
+with open(FILE, mode='w') as file:
+    file.write(f'{DATA}\n')
