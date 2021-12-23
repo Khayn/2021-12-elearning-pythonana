@@ -27,5 +27,7 @@ Tests:
 
 DATA = 'UL. pana \tTWArdoWskIEGO 3'
 
-# str: Jana Twardowskiego III
-result = ...
+# str: Pana Twardowskiego III
+result = DATA.upper().replace('UL.','').replace('\t','') \
+    .strip().title().replace('3','III')
+

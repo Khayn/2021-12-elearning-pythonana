@@ -103,28 +103,64 @@ example = EXAMPLE.upper().replace('UL. ', '').replace('\t', '') \
     .strip().title().replace('3', 'III')
 
 # str: expected string is 'Pana Twardowskiego III'
-a = ...
+a = A.upper().replace('ULICA.','').replace('ULICA','') \
+    .replace('UL.','').replace('UL','').replace('\t','') \
+    .replace('\n','').strip().replace('3', 'III') \
+    .replace('TRZECIEGO', 'III').replace('III ', 'III') \
+    .title().replace('Iii','III')
 
 # str: expected string is 'Pana Twardowskiego III'
-b = ...
+b = B.upper().replace('ULICA.','').replace('ULICA','') \
+    .replace('UL.','').replace('UL','').replace('\t','') \
+    .replace('\n','').strip().replace('3', 'III') \
+    .replace('TRZECIEGO', 'III').replace('III ', 'III') \
+    .title().replace('Iii','III')
 
 # str: expected string is 'Pana Twardowskiego III'
-c = ...
+c = C.upper().replace('ULICA.','').replace('ULICA','') \
+    .replace('UL.','').replace('UL','').replace('\t','') \
+    .replace('\n','').strip().replace('3', 'III') \
+    .replace('TRZECIEGO', 'III').replace('III ', 'III') \
+    .title().replace('Iii','III')
 
 # str: expected string is 'Pana Twardowskiego III'
-d = ...
+d = D.upper().replace('ULICA.','').replace('ULICA','') \
+    .replace('UL.','').replace('UL','').replace('\t','') \
+    .replace('\n','').strip().replace('3', 'III') \
+    .replace('TRZECIEGO', 'III').replace('III ', 'III') \
+    .title().replace('Iii','III')
 
 # str: expected string is 'Pana Twardowskiego III'
-e = ...
+e = E.upper().replace('ULICA.','').replace('ULICA','') \
+    .replace('UL.','').replace('UL','').replace('\t','') \
+    .replace('\n','').strip().replace('3', 'III') \
+    .replace('TRZECIEGO', 'III').replace('III ', 'III') \
+    .title().replace('Iii','III')
 
 # str: expected string is 'Pana Twardowskiego III'
-f = ...
+f = F.upper().replace('ULICA.','').replace('ULICA','') \
+    .replace('UL.','').replace('UL','').replace('\t','') \
+    .replace('\n','').strip().replace('3', 'III') \
+    .replace('TRZECIEGO', 'III').replace('III ', 'III') \
+    .title().replace('Iii','III')
 
 # str: expected string is 'Pana Twardowskiego III'
-g = ...
+g = G.upper().replace('ULICA.','').replace('ULICA','') \
+    .replace('UL.','').replace('UL','').replace('\t','') \
+    .replace('\n','').strip().replace('3', 'III') \
+    .replace('TRZECIEGO', 'III').replace('III ', 'III') \
+    .title().replace('Iii','III')
 
 # str: expected string is 'Pana Twardowskiego III'
-h = ...
+h = H.upper().replace('ULICA.','').replace('ULICA','') \
+    .replace('UL.','').replace('UL','').replace('\t','') \
+    .replace('\n','').strip().replace('3', 'III') \
+    .replace('TRZECIEGO', 'III').replace('III ', 'III') \
+    .title().replace('Iii','III')
 
 # str: expected string is 'Pana Twardowskiego III'
-i = ...
+i = I.upper().replace('ULICA.','').replace('ULICA','') \
+    .replace('UL.','').replace('UL','').replace('A\tT','A T') \
+    .replace('\n','').strip().replace('3', 'III') \
+    .replace('TRZECIEGO', 'III').replace('III ', 'III') \
+    .title().replace('Iii','III')

@@ -31,4 +31,5 @@ Tests:
 """
 
 # str: Hello 😀
-result = ...
+result = 'Hello \U0001F600'
+

@@ -40,4 +40,4 @@ in this decade and do the other things.
 Not because they are easy, but because they are hard."""
 
 # list[str]: with DATA split by lines
-result = ...
+result = DATA.splitlines()

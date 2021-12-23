@@ -42,4 +42,4 @@ from unittest.mock import MagicMock
 input = MagicMock(side_effect=['NASA'])
 
 # str: Ask user to type NASA
-result = ...
+result = input('wpisz')
