@@ -34,3 +34,11 @@ Tests:
     >>> myrange(0, 5)
     [0, 1, 2, 3, 4]
 """
+
+
+def myrange(start, stop, step=1):
+    out = []
+    while start < stop:
+        out.append(start)
+        start += step
+    return out

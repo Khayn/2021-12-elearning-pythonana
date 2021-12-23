@@ -38,3 +38,6 @@ DATA = """127.0.0.1       localhost
 255.255.255.255 broadcasthost
 ::1             localhost
 """
+
+with open(FILE, mode="w") as file:
+    file.writelines(DATA)

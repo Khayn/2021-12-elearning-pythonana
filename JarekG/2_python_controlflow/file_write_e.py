@@ -36,3 +36,8 @@ DATA = [
     ('5.1', '3.5', '1.4', '0.2'),
     ('5.7', '2.8', '4.1', '1.3'),
 ]
+
+data = [','.join(x) for x in DATA]
+
+with open(FILE, mode='w') as file:
+    file.writelines('\n'.join(data) + '\n')

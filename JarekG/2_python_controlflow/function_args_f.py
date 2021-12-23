@@ -79,3 +79,17 @@ DATA = {
     8: 'ait',
     9: 'niner',
 }
+
+
+def pilot_say(text):
+    data = {str(x): y for x, y in DATA.items()}
+    data['-'] = 'minus'
+    data['.'] = 'and'
+
+    try:
+        float(text)
+    except ValueError:
+        raise SyntaxError('invalid syntax')
+
+    text = str(text)
+    return ' '.join([data.get(x) for x in text])

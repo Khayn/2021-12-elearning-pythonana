@@ -48,3 +48,20 @@ Tests:
 
 TODO: Translate input data to English
 """
+
+
+def clean(text):
+    return (
+        text.upper()
+            .replace('ULICA', '')
+            .replace('UL', '')
+            .replace('.', '')
+            .replace('    ', '')
+            .replace('  ', '')
+            .title()
+            .replace('Ii', 'II')
+            .replace('IIi', 'III')
+            .replace('Trzeciego', 'III')
+            .replace('3', 'III')
+            .strip()
+    )
