@@ -35,5 +35,5 @@ PL = {'ą': 'a', 'ć': 'c', 'ę': 'e',
 
 DATA = 'zażółć gęślą jaźń'
 
-# str: DATA with substituted PL diacritic chars to ASCII letters
-result = ...
+# str: DATA with substituted PL diacritic chars to ASCII letter
+result = ''.join([PL.get(x, x) for x in DATA])

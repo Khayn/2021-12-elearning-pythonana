@@ -35,10 +35,19 @@ Tests:
 DATA = ['red', 'green', 'blue', 'red', 'green', 'red', 'blue']
 
 # int: number of 'red' elements in DATA
-red = ...
+red = 0
 
 # int: number of 'green' elements in DATA
-green = ...
+green = 0
 
 # int: number of 'blue' elements in DATA
-blue = ...
+blue = 0
+
+for color in DATA:
+    if color == 'red':
+        red += 1
+    elif color == 'blue':
+        blue += 1
+    else:
+        green += 1
+        

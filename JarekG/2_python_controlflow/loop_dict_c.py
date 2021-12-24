@@ -91,4 +91,4 @@ for line in DATA[1:]:
 
 label_encoder = {x for x in labels}
 label_encoder = {k: v for k, v in enumerate(label_encoder)}
-# labels = [la]
+labels = [k for label in labels for k, v in label_encoder.items() if label == v]

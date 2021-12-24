@@ -37,4 +37,10 @@ Tests:
 DATA = (2, 3, 3.5, 4, 4.5, 5)
 
 # list[float]: values from DATA converted to float
-result = ...
+result = []
+
+idx = 0
+
+while idx < len(DATA):
+    result.append(float(DATA[idx]))
+    idx += 1

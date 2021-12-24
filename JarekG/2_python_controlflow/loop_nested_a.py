@@ -39,4 +39,8 @@ DATA = [
 ]
 
 # float: arithmetic mean from `Sepal length` column
-result = ...
+
+sepal = [x for line in DATA[1:] for x in line[0:1]]
+
+
+result = sum(sepal) / len(sepal)

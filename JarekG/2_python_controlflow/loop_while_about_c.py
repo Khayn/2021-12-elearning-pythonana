@@ -35,5 +35,11 @@ PL = {'ą': 'a', 'ć': 'c', 'ę': 'e',
 
 DATA = 'zażółć gęślą jaźń'
 
-# str: DATA with substituted PL diacritic chars to ASCII letters
-result = ...
+# str: DATA with substituted PL diacritic chars to ASCII letter
+result = ''
+
+idx = 0
+while idx < len(DATA):
+    result += PL.get(DATA[idx], DATA[idx])
+    idx += 1
+      
