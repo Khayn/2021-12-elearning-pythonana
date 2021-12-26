@@ -57,3 +57,10 @@ DATA = [
     (6.4, 3.2, 4.5, 1.5, 'versicolor'),
     (4.7, 3.2, 1.3, 0.2, 'setosa'),
 ]
+
+data = [[str(x) for x in y] for y in DATA]
+data = [','.join(x) for x in data]
+
+with open(FILE, mode='w') as file:
+    file.writelines('\n'.join(data) + '\n')
+

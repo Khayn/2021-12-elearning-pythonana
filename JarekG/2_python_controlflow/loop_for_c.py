@@ -42,3 +42,15 @@ DATA = [1, 4, 6, 7, 4, 4, 4, 5, 1, 7, 0,
 
 # dict[str,int] number of digit occurrences in segments
 result = {'small': 0, 'medium': 0, 'large': 0}
+
+for number in DATA:
+    if number < 3:
+        total = result.get('small')
+        result.update({'small': total + 1})
+    elif number >= 7:
+        total = result.get('large')
+        result.update({'large': total + 1})
+    else:
+        total = result.get('medium')
+        result.update({'medium': total + 1})
+        

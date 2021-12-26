@@ -38,3 +38,9 @@ Tests:
     >>> [fib(x) for x in range(10)]
     [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 """
+
+
+def fib(a):
+    if a <= 1:
+        return 1
+    return fib(a - 1) + fib(a - 2)

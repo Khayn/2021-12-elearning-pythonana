@@ -34,3 +34,13 @@ input = MagicMock(side_effect=['0', '9', '1', '8', '2', '7', '3', '6', '4'])
 
 
 HIDDEN = 4
+
+while True:
+    number = int(input('Liczba: '))
+    if number > HIDDEN:
+        print('Above')
+    elif number < HIDDEN:
+        print('Below')
+    else:
+        print('Exactly')
+        break

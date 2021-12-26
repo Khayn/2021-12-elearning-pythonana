@@ -80,3 +80,23 @@ with open(FILE, mode='w') as file:
 
 # list[dict]: example [{'ip': '127.0.0.1', 'hostnames': ['localhost', 'astromatt'], 'protocol': 'IPv4'}, ...]
 result = []
+
+with open(FILE, mode='r') as file:
+    for line in file:
+        update = False
+        line = line.strip()
+        if line.startswith('#') or line.startswith(' ') or len(line) == 0:
+            continue
+        ip, *hosts = line.split()
+        protocol = 'IPv4' if '.' in ip else 'IPv6'
+        for row in result:
+            if row.get('ip') == ip:
+                update = True
+                hosts.extend(row.get('hostnames'))
+                row['hostnames'] = hosts
+        if not update:
+            result.append({
+                'ip': ip,
+                'hostnames': hosts,
+                'protocol': protocol
+            })

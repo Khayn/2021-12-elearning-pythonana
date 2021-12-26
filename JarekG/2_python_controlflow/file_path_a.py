@@ -41,4 +41,11 @@ Tests:
 
 
 def result(filename):
-    ...
+    try:
+        with open(filename) as f:
+            pass
+        output = 'Ok'
+    except IOError:
+        output = 'File not found'
+
+    print(output)

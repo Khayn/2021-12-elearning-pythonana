@@ -77,4 +77,8 @@ result = {}
 
 with open(FILE) as file:
     for line in file:
-        ...
+        line = line.strip()
+        if line.startswith('#') or line.startswith(' ') or len(line) == 0:
+            continue
+        ip, *hosts = line.split()
+        result.setdefault(ip, []).extend(hosts)

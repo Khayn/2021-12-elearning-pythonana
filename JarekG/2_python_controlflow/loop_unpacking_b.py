@@ -55,4 +55,6 @@ label: set
 species: str
 
 # set[str]: species names ending with 'ca' or 'osa'
-result = ...
+result = {x for line in DATA[1:] for set_x in line[-1:] for x in set_x}
+result = {x for x in result for suffix in SUFFIXES if x.endswith(suffix)}
+

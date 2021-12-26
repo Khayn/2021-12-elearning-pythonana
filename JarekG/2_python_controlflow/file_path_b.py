@@ -50,9 +50,12 @@ from pathlib import Path
 
 
 FILENAME = 'myfile.txt'
+filename = Path(FILENAME)
 
 # Path: Absolute path to FILENAME
-abspath = ...
+abspath = Path(filename.cwd(), filename)
 
 # str: file, directory or missing
-result = ...
+result = 'missing'
+result = 'file' if filename.is_file() else result
+result = 'directory' if filename.is_dir() else result

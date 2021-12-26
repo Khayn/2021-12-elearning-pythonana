@@ -28,3 +28,11 @@ Tests:
     >>> total(range(0,101))
     2550
 """
+
+
+def total(seq):
+    _total = 0
+    for n in seq:
+        if n % 2 == 0:
+            _total += n
+    return _total

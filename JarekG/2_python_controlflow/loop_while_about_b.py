@@ -34,4 +34,8 @@ Tests:
 DATA = ['h', 'e', 'l', 'l', 'o']
 
 # str: joined DATA values
-result = ...
+result = ''
+
+while DATA:
+    result += DATA.pop(0)
+    

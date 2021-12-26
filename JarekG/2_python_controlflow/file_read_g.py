@@ -72,7 +72,6 @@ Tests:
       >>> remove(FILE_PASSWD)
 """
 
-from datetime import date
 from os.path import dirname, join
 
 
@@ -191,4 +190,68 @@ ALGORITHMS = {
 }
 
 # list[dict]: joined data from all files for users with `UID` greater than 1000
-result = ...
+
+from datetime import date
+
+result = []
+user_by_group = {}
+user_by_shadow ={}
+
+with open(FILE_GROUP, mode='r') as file:
+    for line in file:
+        line = line.strip()
+        if line.startswith('#') or line.startswith(' ') or len(line) == 0:
+            continue
+        group, *_, users = line.split(':')
+        for user in users.split(','):
+            if user:
+                user_by_group.setdefault(user, []).append(group)
+
+with open(FILE_SHADOW, mode='r') as file:
+    for line in file:
+        line = line.strip()
+        if line.startswith('#') or line.startswith(' ') or len(line) == 0:
+            continue
+        user, *features = line.split(':')
+        if user:
+            user_by_shadow.setdefault(user, []).extend(features)
+
+
+def parse_passwd(passwd):
+    algorithm = None
+    password = None
+    is_locked = (passwd.startswith('!') or passwd.startswith('*'))
+    locked = True if is_locked else False
+    passwd_fields = passwd.split('$')
+    if len(passwd_fields) == 4:
+        _, alg_id, _, pw_hash = passwd.split('$')
+        algorithm = ALGORITHMS.get(alg_id, None)
+        password = pw_hash
+    return algorithm, password, locked
+
+
+with open(FILE_PASSWD, mode='r') as file:
+    for line in file:
+        line = line.strip()
+        if line.startswith('#') or line.startswith(' ') or len(line) == 0:
+            continue
+        user, _, uid, gid, _, home, shell = line.split(':')
+        if int(gid) >= 1000:
+            shadow = user_by_shadow.get(user)
+            passwd, last_changed, time_disable, *_ = shadow
+            groups = user_by_group.get(user)
+            alg, hash_pw, locked = parse_passwd(passwd)
+            last = date.fromtimestamp(int(last_changed) * DAY)
+            user_data = {
+                'username': user,
+                'uid': int(uid),
+                'gid': int(gid),
+                'home': home,
+                'shell': shell,
+                'algorithm': alg,
+                'password': hash_pw,
+                'groups': groups,
+                'last_changed': last,
+                'locked': locked
+            }
+            result.append(user_data)

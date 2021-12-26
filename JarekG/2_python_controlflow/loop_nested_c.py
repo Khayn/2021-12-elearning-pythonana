@@ -11,10 +11,10 @@ English:
     3. Clean each sentence from whitespaces at the beginning and at the end
     4. Words are separated by spaces
     5. Print the total number in whole text:
-        a. adverbs (words ending with "ly")
+        a. adverbs (word ending with "ly")
         b. sentences
-        c. words
-        d. letters
+        c. word
+        d. letter
         e. characters (including spaces inside sentences, but not comas `,`)
         f. comas (`,`)
     6. Run doctests - all must succeed
@@ -48,9 +48,9 @@ Tests:
 
     >>> print(result)  # doctest: +NORMALIZE_WHITESPACE
     {'sentences': 7,
-     'words': 71,
+     'word': 71,
      'characters': 347,
-     'letters': 283,
+     'letter': 283,
      'commas': 1,
      'adverbs': 0}
 """
@@ -68,9 +68,32 @@ TEXT = """
 # dict[str,int]: number of occurrences of each grammar object
 result = {
     'sentences': 0,
-    'words': 0,
+    'word': 0,
     'characters': 0,
-    'letters': 0,
+    'letter': 0,
     'commas': 0,
     'adverbs': 0,
 }
+
+for sentences in TEXT.split('.'):
+    sentences = sentences.strip()
+    t = result.get('sentences')
+    result.update({'sentences': t + 1})
+    for word in sentences.split(' '):
+        if word.endswith('ly'):
+            t = result.get('adverbs')
+            result.update({'adverbs': t + 1})
+        t = result.get('word')
+        result.update({'word': t + 1})
+        for letter in word:
+            if letter == ',':
+                t = result.get('commas')
+                result.update({'commas': t + 1})
+                continue
+            t = result.get('letter')
+            result.update({'letter': t + 1})
+    for char in sentences:
+        if char == ',':
+            continue
+        t = result.get('characters')
+        result.update({'characters': t + 1})

@@ -34,3 +34,8 @@ Tests:
     >>> default(2, 3)
     {'a': 2, 'b': 3}
 """
+
+
+def default(a, b=None):
+    b = b if b else a
+    return {'a': a, 'b': b}

@@ -40,4 +40,8 @@ DATA = [
 ]
 
 # str: DATA joined with newline - \n
-result = ...
+result = ''
+
+for line in DATA:
+    result += f'{line}\n'
+    

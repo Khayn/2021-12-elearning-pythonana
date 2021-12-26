@@ -23,7 +23,7 @@ Tests:
     >>> type(result)
     <class 'list'>
 
-    >>> assert all(type(x) is dict for x in result)
+    >>> assert all(type(data) is dict for x in result)
 
     >>> result  # doctest: +NORMALIZE_WHITESPACE
     [{'Sepal length': 5.8, 'Sepal width': 2.7, 'Petal length': 5.1, 'Petal width': 1.9, 'Species': 'virginica'},
@@ -45,4 +45,12 @@ DATA = [
 ]
 
 # list[dict]: with converted DATA
-result = ...
+
+result = []
+
+
+for line in DATA[1:]:
+    data = {}
+    for idx, key in enumerate(DATA[0]):
+        data[key] = line[idx]
+    result.append(data)

@@ -46,4 +46,9 @@ DATA = [1, 4, 6, 7, 4, 4, 4, 5, 1, 7, 0,
         4, 8, 1, 9, 6, 3]
 
 # dict[int,int]: number of occurrences of each digit from DATA
-result = ...
+result = {}
+
+for number in DATA:
+    total = result.setdefault(number, 0)
+    result.update({number: total + 1})
+    

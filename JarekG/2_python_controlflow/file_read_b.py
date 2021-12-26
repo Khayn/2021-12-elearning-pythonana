@@ -39,3 +39,8 @@ DATA = 'sepal_length\nsepal_width\npetal_length\npetal_width\nspecies\n'
 
 with open(FILE, mode='wt') as file:
     file.write(DATA)
+
+with open(FILE, mode='r') as f:
+    data = f.readlines()
+
+result = [x.strip() for x in data]

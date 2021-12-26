@@ -31,3 +31,8 @@ Tests:
 
 FILE = '_temporary.txt'
 DATA = ['hello', 'world']
+
+data = '\n'.join(DATA) + '\n'
+
+with open(FILE, mode='w') as file:
+    file.writelines(data)

@@ -38,4 +38,5 @@ DATA = [
 ]
 
 # set[str]: unique keys from DATA dicts
-result = ...
+result = list({x for line in DATA[1:] for x in line.keys()})
+
