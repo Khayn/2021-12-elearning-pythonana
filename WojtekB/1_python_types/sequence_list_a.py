@@ -61,16 +61,16 @@ Tests:
 """
 
 # list[int]: with elements: 1, 2, 3
-result_a = ...
+result_a = [1,2,3]
 
 # list[float]: with elements: 1.1, 2.2, 3.3
-result_b = ...
+result_b = [1.1, 2.2, 3.3]
 
 # list[str]: with elements: 'a', 'b', 'c'
-result_c = ...
+result_c = ['a', 'b', 'c']
 
 # list[bool]: with elements: True, False
-result_d = ...
+result_d = [True, False]
 
 # list[int|float|bool|str]: with elements: 1, 2.2, True, 'a'
-result_e = ...
+result_e = [1, 2.2, True, 'a']
