@@ -70,10 +70,10 @@ DATA = [
 ]
 
 # tuple[float|str]: row from `DATA` at index 2
-result_a = ...
+result_a = DATA [2]
 
 # tuple[float|str]: row from `DATA` at index 4
-result_b = ...
+result_b = DATA [4]
 
 # tuple[float|str]: row from `DATA` at index 6
-result_c = ...
+result_c = DATA [6]
