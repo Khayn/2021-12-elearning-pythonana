@@ -63,4 +63,8 @@ DATA = ['sepal_length,sepal_width,petal_length,petal_width,species',
         '6.4,3.2,4.5,1.5,versicolor']
 
 # tuple[str]: define a tuple with species names
-result = ...
+result = ('virginica',
+'setosa',
+'versicolor',
+'virginica',
+'versicolor')
