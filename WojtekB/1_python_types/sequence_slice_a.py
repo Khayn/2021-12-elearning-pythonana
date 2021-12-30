@@ -79,22 +79,26 @@ G = 'lt. col. Jan Twardowski\t'
 example = EXAMPLE[4:-5]
 
 # str: expected result: 'Jan Twardowski'
-a = ...
+a = A[13:-12]
+print(f'{a}')
 
 # str: expected result: 'Jan Twardowski'
-b = ...
+b = B[10:]
+print(f'{b}')
 
 # str: expected result: 'Mark Watney'
-c = ...
+c = C[:-5]
+print(f'{c}')
 
 # str: expected result: 'Melissa Lewis'
-d = ...
-
+d = D[14:]
+print(f'{d}')
 # str: expected result: 'Ryan Stone'
-e = ...
-
+e = E[11:]
+print(f'{e}')
 # str: expected result: 'Ryan Stone'
-f = ...
-
+f = F[:10]
+print(f'{f}')
 # str: expected result: 'Jan Twardowski'
-g = ...
+g = G[9:-1]
+print(f'{g}')
