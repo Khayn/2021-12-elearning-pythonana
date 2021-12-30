@@ -29,4 +29,5 @@ a = (0, 1, 2, 3)
 b = [2, 3, 4, 5]
 
 # set[int]: with every second element from `a` and `b`
-result = ...
+
+result = {*a[::2], *b[::2]}
