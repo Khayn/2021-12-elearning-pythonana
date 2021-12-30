@@ -34,5 +34,11 @@ Tests:
 TEXT = 'We choose to go to the Moon!'
 REMOVE = 'to go to '
 
+start = TEXT.find(REMOVE)
+print(start)
+length = len(REMOVE)
+print(length)
+
 # str: TEXT without REMOVE part
-result = ...
+result = TEXT [0:start] + TEXT [start+length:]
+print(result)
