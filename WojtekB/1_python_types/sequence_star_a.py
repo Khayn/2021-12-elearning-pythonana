@@ -37,7 +37,8 @@ Tests:
 DATA = ['10.13.37.1', 'nasa.gov', 'esa.int', 'roscosmos.ru']
 
 # str: ip address: '10.13.37.1'
-ip = ...
 
 # list[str]: list of host names: ['nasa.gov', 'esa.int', 'roscosmos.ru']
-hosts = ...
+ip = str(DATA[0])
+hosts = (DATA[1:])
+print(f'\tip= {ip}\n   hosts={hosts} \n')
