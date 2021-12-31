@@ -40,7 +40,7 @@ Tests:
 DATA = '10.13.37.1 nasa.gov'
 
 # str: first string: 10.13.37.1
-ip = ...
+ip = DATA[0:10]
 
 # list[str]: second string: nasa.gov
-host = ...
+host = DATA[11:]
