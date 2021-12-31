@@ -38,4 +38,4 @@ Tests:
 
 # list[tuple|list|set]: with tuple 1, 2, 3 and list 1.1, 2.2, 3.3
 # and set 'Mark Watney', 'Melissa Lewis', 'Jan Twardowski'
-result = ...
+result = [(1,2,3),[1.1,2.2,3.3],{'Mark Watney', 'Melissa Lewis', 'Jan Twardowski'}]
