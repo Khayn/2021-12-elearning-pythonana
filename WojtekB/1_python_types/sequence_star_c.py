@@ -56,7 +56,8 @@ DATA = [
     (4.7, 3.2, 1.3, 0.2, 'setosa')]
 
 # tuple[str]: with row with index 0: ('Sepal length', 'Sepal width', ...)
-header = ...
+header, *data = DATA
+print(f'{header}\n{data}')
 
 # list[tuple]: with all other rows: (5.8, 2.7, 5.1, 1.9, 'virginica'),  ...
-data = ...
+

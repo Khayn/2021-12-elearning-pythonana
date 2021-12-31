@@ -34,10 +34,11 @@ Tests:
     ['nasa.gov', 'esa.int', 'roscosmos.ru']
 """
 
-DATA = '10.13.37.1      nasa.gov esa.int roscosmos.ru'
+DATA = '10.13.37.1 nasa.gov esa.int roscosmos.ru'
 
 # str: ip address: '10.13.37.1'
-ip = ...
-
+ip, *_ = DATA.split(' ')
+print(f'ip = {ip},   DATA= {DATA} \n')
 # list[str]: list of host names: ['nasa.gov', 'esa.int', 'roscosmos.ru']
-hosts = ...
+_, *hosts = DATA.split(' ')
+print(hosts)
