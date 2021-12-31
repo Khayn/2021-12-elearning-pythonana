@@ -83,10 +83,12 @@ header = DATA[0]
 data = DATA[1:]
 
 # int: `data` length multiplied by percent
-split = ...
+split = int(len(data)*0.6)
 
 # list[tuple]: first 60% from data
-train = ...
+train = (data[0:split])
 
 # list[tuple]: last 40% from data
-test = ...
+test = (data[split:])
+
+print(f'split = {split} \n    train ={train} \n   test = {test}  ')
