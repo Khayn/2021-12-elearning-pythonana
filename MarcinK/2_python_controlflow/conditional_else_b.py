@@ -36,4 +36,7 @@ Tests:
 IP_ADDRESS = '127.0.0.1'
 
 # str: Whether 'IPv4' or 'IPv6'
-result = ...
+if '.' in IP_ADDRESS:
+    result = 'IPv4'
+else:
+    result = 'IPv6'

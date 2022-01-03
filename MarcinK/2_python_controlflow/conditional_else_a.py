@@ -41,4 +41,7 @@ age = input('What is your age?: ')
 ADULT = 18
 
 # str: Whether 'Adult' or 'Young'
-result = ...
+if int(age) < ADULT:
+    result = 'Young'
+else:
+    result = 'Adult'
