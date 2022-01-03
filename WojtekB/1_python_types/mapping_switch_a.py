@@ -84,7 +84,10 @@ ALPHABET = {
 }
 
 # str: with letter from user
-letter = ...
+print('podaj wartosc')
+letter = input()
 
 # str: with converted letter to Pilot alphabet or 'Not found'
-result = ...
+
+result = ALPHABET.get(letter, "Not found")
+
