@@ -38,4 +38,9 @@ DATA = [
 ]
 
 # set[str]: unique keys from DATA dicts
-result = ...
+result = set()
+
+for row in DATA:
+    result.update(row.keys())
+
+print(result)

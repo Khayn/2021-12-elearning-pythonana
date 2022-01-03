@@ -34,4 +34,9 @@ Tests:
 DATA = ['h', 'e', 'l', 'l', 'o']
 
 # str: joined DATA values
-result = ...
+result = str()
+
+while len(result) < len(DATA):
+    result += DATA[len(result)]
+
+print(result)

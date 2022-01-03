@@ -41,4 +41,9 @@ DATA = {
 }
 
 # dict[str,str]: converted DATA. Note values are str not int!
-result = ...
+result = {}
+
+for id, titles in DATA.items():
+    for title in titles:
+        result[title] = str(id)
+

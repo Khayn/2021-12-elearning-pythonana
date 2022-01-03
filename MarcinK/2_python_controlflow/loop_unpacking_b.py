@@ -55,4 +55,13 @@ label: set
 species: str
 
 # set[str]: species names ending with 'ca' or 'osa'
-result = ...
+result = set()
+
+header, *data = DATA
+
+for *features, label in data:
+    species = label.pop()
+    if species.endswith(SUFFIXES):
+        result.add(species)
+
+print(result)

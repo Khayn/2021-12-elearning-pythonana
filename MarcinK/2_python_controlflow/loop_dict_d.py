@@ -75,10 +75,26 @@ DATA = [
 ]
 
 # list[tuple]: values from column 0-3 from DATA without header
-features = ...
+features = []
 
 # list[str]: species name from column 4 from DATA without header
-labels = ...
+labels = []
 
 # dict[int,str]: lookup dict generated from species names
-label_encoder = ...
+label_encoder = {}
+
+header, *data = DATA
+
+tmp = {}
+i = 0
+
+for *X, y in data:
+    if y not in tmp:
+        tmp[y] = i
+        i += 1
+
+    labels.append(tmp[y])
+    features.append(tuple(X))
+
+for key, value in tmp.items():
+    label_encoder[value] = key

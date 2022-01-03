@@ -60,7 +60,21 @@ input = MagicMock(side_effect=['1', '2', '2.5', '3', '3.5', '4', '5', '6', ''])
 GRADE_SCALE = (2.0, 3.0, 3.5, 4.0, 4.5, 5.0)
 
 # list[float]: all user grades
-grades = ...
+grades = []
 
 # float: arithmetic mean of grades
-result = ...
+result = float()
+
+while True:
+    try:
+        ocena = float(input('Podaj ocenę: '))
+        if ocena in GRADE_SCALE:
+            grades.append(float(ocena))
+        else:
+            continue
+    except ValueError:
+        result = sum(grades)/len(grades)
+        break
+
+
+

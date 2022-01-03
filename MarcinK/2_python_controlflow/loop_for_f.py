@@ -55,4 +55,12 @@ MONTHS = ['January', 'February', 'March', 'April',
           'October', 'November', 'December']
 
 # dict[int,str]: dict with month number and name. Start with 1
-result = ...
+result = {}
+
+monthNum = 1
+for month in MONTHS:
+    result[monthNum] = month
+    monthNum += 1
+
+print(result)
+

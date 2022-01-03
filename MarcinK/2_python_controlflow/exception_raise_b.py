@@ -54,4 +54,10 @@ ADULT = 18
 
 
 def result(age):
-    ...
+    if type(age) not in (int, float):
+        raise TypeError
+    elif age < 0:
+        raise ValueError
+    elif age < ADULT:
+        raise PermissionError
+

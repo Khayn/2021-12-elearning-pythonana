@@ -45,5 +45,14 @@ Tests:
 """
 
 
+class NegativeKelvinError(value):
+    if value < 0:
+        pass
+
 def result(value):
-    ...
+
+    try:
+        value = float(value)
+    except NegativeKelvinError:
+        raise  NegativeKelvinError
+

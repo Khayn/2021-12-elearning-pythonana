@@ -45,4 +45,11 @@ DATA = [
 ]
 
 # list[dict]: with converted DATA
-result = ...
+result = []
+
+key, *measurments = DATA
+
+for row in measurments:
+    para = zip(key, row)
+    result.append(dict(para))
+

@@ -101,4 +101,15 @@ diastolic = int(diastolic)
 # | Hypertensive Crisis     | Higher than 180  | and/or   | Higher than 120   |
 
 # str: one of the STATUS_*
-result = ...
+if systolic < 120 and diastolic < 80:
+    result = STATUS_NORMAL
+elif systolic in range(120, 129) and diastolic < 80:
+    result = STATUS_ELEVATED
+elif systolic in range(130, 139) or diastolic in range(80, 89):
+    result = STATUS_HYPERTENSION_STAGE_1
+elif systolic >= 140 or diastolic >= 90:
+    result = STATUS_HYPERTENSION_STAGE_2
+elif systolic > 180 or diastolic > 120:
+    result = STATUS_HYPERTENSIVE_CRISIS
+else:
+    print('Coś innego')
