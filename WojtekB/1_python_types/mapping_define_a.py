@@ -58,4 +58,9 @@ DATA = """
 """
 
 # dict[str,str|list]: with First Name, Last Name and Missions as keys
-result = ...
+result = {
+    'First Name': ['Jan'],
+    'Last Name': ['Twardowski'],
+    'Missions': ['Apollo', 'Artemis'],
+
+}
