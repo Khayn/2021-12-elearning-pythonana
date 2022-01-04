@@ -53,4 +53,9 @@ MONTHS = ['January', 'February', 'March', 'April',
           'October', 'November', 'December']
 
 # dict[int,str]: dict with month number and name. Start with 1
-result = ...
+result = {}
+
+for count, numMonth in enumerate(MONTHS, start=1):
+    result[count] = numMonth
+
+print(result)

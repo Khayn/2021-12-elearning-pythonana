@@ -40,4 +40,9 @@ DATA = [
 ]
 
 # str: DATA joined with newline - \n
-result = ...
+result = str()
+
+for i in DATA:
+    result += i + '\n'
+
+print(result)

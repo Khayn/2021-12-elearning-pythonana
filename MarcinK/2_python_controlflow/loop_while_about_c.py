@@ -36,4 +36,13 @@ PL = {'ą': 'a', 'ć': 'c', 'ę': 'e',
 DATA = 'zażółć gęślą jaźń'
 
 # str: DATA with substituted PL diacritic chars to ASCII letters
-result = ...
+result = str()
+
+while len(result) < len(DATA):
+
+    if DATA[len(result)] in PL:
+        result += PL[DATA[len(result)]]
+    else:
+        result += DATA[len(result)]
+
+print(result)

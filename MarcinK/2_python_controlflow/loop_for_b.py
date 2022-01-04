@@ -46,4 +46,12 @@ DATA = [1, 4, 6, 7, 4, 4, 4, 5, 1, 7, 0,
         4, 8, 1, 9, 6, 3]
 
 # dict[int,int]: number of occurrences of each digit from DATA
-result = ...
+result = {}
+
+for i in DATA:
+        if i not in result:
+                result[i] = 1
+        else:
+                result[i] += 1
+
+print(result)

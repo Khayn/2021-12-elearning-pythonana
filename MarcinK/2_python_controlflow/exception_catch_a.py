@@ -37,4 +37,9 @@ Tests:
 
 
 def result(value):
-    ...
+    try:
+        value = float(value)
+    except ValueError:
+        print('Invalid value')
+
+

@@ -74,3 +74,21 @@ result = {
     'commas': 0,
     'adverbs': 0,
 }
+
+for zdanie in TEXT.split('.'):
+    zdanie = zdanie.strip()
+    slowa = zdanie.split()
+    znaki = zdanie.replace(',', '')
+    litery = znaki.replace(' ','')
+
+    result['sentences'] += 1
+    result['words'] += len(slowa)
+    result['characters'] += len(znaki)
+    result['letters'] += len(litery)
+    result['commas'] += zdanie.count(',')
+
+    for slowo in slowa:
+        if slowo.endswith('ly'):
+            result['adverbs'] += 1
+
+print(result)

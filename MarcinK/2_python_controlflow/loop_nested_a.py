@@ -39,4 +39,16 @@ DATA = [
 ]
 
 # float: arithmetic mean from `Sepal length` column
-result = ...
+result = []
+i = 0
+
+for row in DATA:
+
+    if isinstance(DATA[i][0], float):
+        result.append(DATA[i][0])
+        print(result)
+
+    i += 1
+
+result = sum(result)/len(result)
+print(result)
