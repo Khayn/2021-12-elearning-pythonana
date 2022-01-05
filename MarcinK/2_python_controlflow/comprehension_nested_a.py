@@ -48,4 +48,7 @@ DATA = {
 }
 
 # dict[str,str]: converted DATA. Note values are str not int!
-result = ...
+result = {}
+result = {title: str(idx) for idx, titles in DATA.items() for title in titles}
+
+print(result)
