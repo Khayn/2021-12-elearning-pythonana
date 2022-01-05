@@ -13,14 +13,7 @@ English:
     4. You cannot change `DATA`, but you can modify `data`
     5. Run doctests - all must succeed
 
-Polish:
-    1. Dany jest alfabet pilotów dla numerów
-    2. Przekonwertuj `DATA: dict[int, str]` na `data: dict[str, str]`
-       (klucze jako `str`)
-    3. Zdefiniuj funkcję `pilot_say` konwertującą `int` lub `float`
-       na formę tekstową w mowie pilotów
-    4. Nie możesz zmieniać `DATA`, ale możesz modyfikować `data`
-    5. Uruchom doctesty - wszystkie muszą się powieść
+
 
 Tests:
     >>> import sys; sys.tracebacklimit = 0
@@ -65,6 +58,15 @@ Tests:
     >>> pilot_say(1-)
     Traceback (most recent call last):
     SyntaxError: invalid syntax
+
+    Polish:
+    1. Dany jest alfabet pilotów dla numerów
+    2. Przekonwertuj `DATA: dict[int, str]` na `data: dict[str, str]`
+       (klucze jako `str`)
+    3. Zdefiniuj funkcję `pilot_say` konwertującą `int` lub `float`
+       na formę tekstową w mowie pilotów
+    4. Nie możesz zmieniać `DATA`, ale możesz modyfikować `data`
+    5. Uruchom doctesty - wszystkie muszą się powieść
 """
 
 DATA = {
@@ -79,3 +81,13 @@ DATA = {
     8: 'ait',
     9: 'niner',
 }
+
+data =
+
+print(data)
+
+def pilot_say(data):
+
+    result = {}
+
+    return result

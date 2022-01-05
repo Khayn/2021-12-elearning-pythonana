@@ -37,3 +37,7 @@ Tests:
     >>> total(range(0,101))
     5050
 """
+
+def total(data):
+    return sum(data)
+

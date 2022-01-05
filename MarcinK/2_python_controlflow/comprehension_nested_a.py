@@ -52,3 +52,4 @@ result = {}
 result = {title: str(idx) for idx, titles in DATA.items() for title in titles}
 
 print(result)
+print(DATA.items())

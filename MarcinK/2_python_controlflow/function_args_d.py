@@ -40,3 +40,7 @@ Tests:
 PL = {'ą': 'a', 'ć': 'c', 'ę': 'e',
       'ł': 'l', 'ń': 'n', 'ó': 'o',
       'ś': 's', 'ż': 'z', 'ź': 'z'}
+
+def translate(text):
+      return ''.join([PL.get(letter, letter) for letter in text])
+
