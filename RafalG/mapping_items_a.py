@@ -60,7 +60,8 @@ DATA = {'Sepal length': 5.8,
 keys = [*DATA.keys()]
 
 # list[float]: with values from DATA
-values = [*DATA.values()]
+values = [*DATA.values()]pab3305
+17123
 
 # list[tuple]: with key-value pairs from DATA
 items = [*DATA.items()]
