@@ -58,14 +58,16 @@ MONTHS = ['January', 'February', 'March', 'April',
 
 # dict[str,str]: number and month name
 result = {}
-result = [{numMONTH: MONTH} for numMONTH, MONTH in enumerate(MONTHS, 1)]
+[result.update({numMONTH: MONTH}) for numMONTH, MONTH in enumerate(MONTHS, 1)]
 
 print(result)
 print(type(result))
 
 result2 = {}
 for numMONTH, MONTH in enumerate(MONTHS, 1):
-    result2[numMONTH] = MONTH
+    result2.update({str(numMONTH): MONTH})
+
 
 print(result2)
 print(type(result2))
+
