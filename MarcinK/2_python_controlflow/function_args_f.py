@@ -70,24 +70,19 @@ Tests:
 """
 
 DATA = {
-    0: 'zero',
-    1: 'one',
-    2: 'two',
-    3: 'tree',
-    4: 'fower',
-    5: 'fife',
-    6: 'six',
-    7: 'seven',
-    8: 'ait',
-    9: 'niner',
+    '0': 'zero',
+    '1': 'one',
+    '2': 'two',
+    '3': 'tree',
+    '4': 'fower',
+    '5': 'fife',
+    '6': 'six',
+    '7': 'seven',
+    '8': 'ait',
+    '9': 'niner',
+    '-': 'minus',
+    '.': 'and'
 }
 
-data =
-
-print(data)
-
-def pilot_say(data):
-
-    result = {}
-
-    return result
+def pilot_say(number):
+    return ' '.join(DATA.get(x, x) for x in str(number))

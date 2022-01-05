@@ -50,6 +50,6 @@ TODO: Translate input data to English
 """
 
 def clean(text):
-    return text.lower().replace('ulica', '').replace('ul', '').replace('.', '').\
+    return text.lower().replace('    ', '').replace('  ','').replace('ulica', '').replace('ul', '').replace('.', '').\
         title().replace('Ii', 'II').replace('IIi', 'III').replace('Trzeciego', 'III').replace('3', 'III').strip()
 
