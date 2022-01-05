@@ -98,4 +98,15 @@ DATA = [
 
 ratio = 0.6
 header, *data = DATA
-split = int(len(data) * ratio)
+split = int(len(data) * ratio) #60%
+
+features_train = [list(train) for *train,label in data[:split]]
+features_test = [list(test) for *test,label in data[split:]]
+labels_train = [label for *train,label in data[:split]]
+labels_test = [label for *test,label in data[split:]]
+
+print(features_train)
+print(features_test)
+print(labels_train)
+print(labels_test)
+print(split)
