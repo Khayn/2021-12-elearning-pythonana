@@ -56,12 +56,14 @@ DATA = {'Sepal length': 5.8,
         'Petal length': 5.1,
         'Petal width': 1.9}
 
+
+
 # list[str]: with keys from DATA
-keys = [*DATA.keys()]
+keys = list(DATA.keys())
 
 # list[float]: with values from DATA
-values = [*DATA.values()]pab3305
-17123
+values = list(DATA.values())
 
 # list[tuple]: with key-value pairs from DATA
-items = [*DATA.items()]
+items = tuple(DATA.items())
+print(items)
