@@ -77,3 +77,14 @@ class Iris:
 
     def get_numeric_values(self):
         return [x for x in vars(self).values() if type(x) is float]
+
+    @property
+    def total(self):
+        return sum(self.get_numeric_values())
+    
+    @property
+    def mean(self):
+        return self.total / len(self.get_numeric_values())
+
+    def show(self):
+        return f'total={self.total:.2f} mean={self.mean:.2f} {self.species}'

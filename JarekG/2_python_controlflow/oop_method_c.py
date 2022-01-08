@@ -50,4 +50,7 @@ class Stats:
 stats = Stats()
 
 # list[float]: apply `mean()` to each feature
-result = ...
+result = []
+
+for *features, _ in DATA[1:]:
+    result.append(stats.mean(features))

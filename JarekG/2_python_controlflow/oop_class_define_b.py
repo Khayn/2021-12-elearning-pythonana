@@ -22,3 +22,11 @@ Tests:
     >>> assert isclass(Astronaut)
     >>> assert isclass(SpaceAgency)
 """
+
+
+class Astronaut:
+    pass
+
+
+class SpaceAgency:
+    pass
