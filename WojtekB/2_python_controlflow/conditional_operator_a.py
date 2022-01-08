@@ -51,4 +51,5 @@ input = MagicMock(side_effect=['4'])
 number = input('What is your number?: ')
 
 # bool: Whether input number is even or odd (modulo divide)
-result = ...
+
+result = bool(not int(number)%2)
