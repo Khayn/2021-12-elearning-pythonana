@@ -32,3 +32,10 @@ Tests:
     >>> power(3)
     27
 """
+
+
+def power(a, b=None):
+    if b is None:
+        return a ** a
+    else:
+        return a ** b

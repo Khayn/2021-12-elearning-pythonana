@@ -28,3 +28,13 @@ Tests:
 """
 
 result = []
+
+def call():
+    result.append('Beetlejuice')
+    return result
+
+
+call()
+call()
+call()
+print(result)

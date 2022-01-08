@@ -37,3 +37,11 @@ Tests:
     >>> stats.mean([5.8, 2.7, 5.1, 1.9])
     3.9
 """
+
+
+class Stats:
+    def __init__(self, *args, **kwargs):
+        pass
+    
+    def mean(self, data):
+        return round(sum(data) / len(data), 1)

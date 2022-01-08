@@ -33,3 +33,12 @@ Tests:
     >>> divide(4, 2)
     2.0
 """
+
+def divide(a, b):
+
+    if b != 0:
+        return a/b
+    else:
+        raise ValueError('Argument `b` cannot be zero')
+
+

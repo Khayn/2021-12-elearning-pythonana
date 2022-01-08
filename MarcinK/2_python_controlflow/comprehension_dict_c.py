@@ -44,4 +44,6 @@ DATA = {
     2: 'versicolor'}
 
 # dict[str,int]:
-result = ...
+
+result = {value: key for key, value in DATA.items()}
+print(result)

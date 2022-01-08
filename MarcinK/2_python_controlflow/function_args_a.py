@@ -28,3 +28,7 @@ Tests:
     >>> total(range(0,101))
     2550
 """
+
+
+def total(sekwencja):
+    return sum(x for x in sekwencja if x % 2 == 0)

@@ -63,4 +63,7 @@ MONTHS = ['January', 'February', 'March', 'April',
           'October', 'November', 'December']
 
 # dict[str,str]: with zero-padded number and month name
-result = ...
+result = {}
+[result.update({f'{numMONTH:02}': MONTH}) for numMONTH, MONTH in enumerate(MONTHS, 1)]
+
+print(result)

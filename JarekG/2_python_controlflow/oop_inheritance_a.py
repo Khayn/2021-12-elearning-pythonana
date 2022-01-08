@@ -34,3 +34,14 @@ class Venus:
 
 class Mars:
     pass
+
+
+class Woman(Venus):
+    def __init__(self):
+        super(Mars, self).__init__()
+        
+
+class Man(Mars):
+    def __init__(self):
+        super(Mars, self).__init__()
+        

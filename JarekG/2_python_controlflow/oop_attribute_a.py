@@ -38,12 +38,20 @@ Tests:
 # Watney, USA, 1969-07-21
 # NASA, USA, 1958-07-29
 
+
 class Astronaut:
-    pass
+    def __init__(self):
+        # self.Watney = 'Watney, USA, 1969-07-21'
+        self.name = 'Watney'
+        self.country = 'USA'
+        self.date = '1969-07-21'
 
 
 class SpaceAgency:
-    pass
+    def __init__(self):
+        self.name = 'NASA'
+        self.country = 'USA'
+        self.date = '1958-07-29'
 
 
 watney = Astronaut()

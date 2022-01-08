@@ -32,3 +32,9 @@ Tests:
     >>> echo(3, 4)
     (3, 4)
 """
+
+
+def echo(a, b):
+
+    return (a, b)
+

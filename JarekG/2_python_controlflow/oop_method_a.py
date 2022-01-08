@@ -29,3 +29,12 @@ Tests:
     >>> calc.add(1, 2)
     3
 """
+
+
+class Calculator:
+    def __init__(self, *args, **kwargs):
+        pass
+    
+    def add(self, a, b):
+        return a + b
+        

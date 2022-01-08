@@ -34,3 +34,9 @@ Tests:
     >>> vars(result)
     {}
 """
+
+
+class Echo:
+    def __init__(self, text, *args, **kwargs):
+        print(text)
+        
