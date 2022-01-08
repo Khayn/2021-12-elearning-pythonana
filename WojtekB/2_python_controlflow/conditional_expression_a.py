@@ -41,4 +41,4 @@ ADULT = 18
 AGE = 12
 
 # str: Whether 'adult' or 'underage'
-result = ...
+result = 'underage' if AGE<18 else 'adult'
