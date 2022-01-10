@@ -167,3 +167,73 @@
 	OOP Stringify Str - oop_stringify_a.py
 
 
+3_stdlib
+--------
+	CSV DictReader Iris - csv_dictreader_a.py
+	CSV DictWriter Fixed - csv_dictwriter_a.py
+	CSV DictWriter Objects - csv_dictwriter_c.py
+	CSV DictWriter Schemaless - csv_dictwriter_b.py
+	CSV Format ReadFixedHeader - csv_format_e.py
+	CSV Format ReadGenerateHeader - csv_format_f.py
+	CSV Format ReadLabelEncoder - csv_format_c.py
+	CSV Format ReadString - csv_format_a.py
+	CSV Format ReadSwitch - csv_format_b.py
+	CSV Format ReadTypeCast - csv_format_d.py
+	CSV Format WriteFixed - csv_format_h.py
+	CSV Format WriteListDict - csv_format_g.py
+	CSV Format WriteListDict - csv_format_k.py
+	CSV Format WriteListTuple - csv_format_j.py
+	CSV Format WriteObjects - csv_format_l.py
+	CSV Format WriteSchemaless - csv_format_i.py
+	CSV Reader Enumerate - csv_reader_c.py
+	CSV Reader Substitute - csv_reader_b.py
+	CSV Reader Syntax - csv_reader_a.py
+	CSV Reader TypeCast - csv_reader_d.py
+	CSV Relations Join - csv_relations_b.py
+	CSV Relations Nested - csv_relations_a.py
+	CSV Writer Iris - csv_writer_a.py
+	Datetime Create Combine - datetime_create_b.py
+	Datetime Create Current - datetime_create_c.py
+	Datetime Create Custom - datetime_create_a.py
+	Datetime Format LeadingZero - datetime_format_b.py
+	Datetime Format US - datetime_format_a.py
+	Datetime ISO Format - datetime_iso_a.py
+	Datetime ISO List - datetime_iso_c.py
+	Datetime ISO Logs - datetime_iso_d.py
+	Datetime ISO Parse - datetime_iso_b.py
+	Datetime Parse List - datetime_parse_c.py
+	Datetime Parse Many - datetime_parse_d.py
+	Datetime Parse Ordinals - datetime_parse_b.py
+	Datetime Parse US - datetime_parse_a.py
+	Datetime Timedelta Age - datetime_timedelta_b.py
+	Datetime Timedelta Dict - datetime_timedelta_d.py
+	Datetime Timedelta Duration - datetime_timedelta_a.py
+	Datetime Timedelta Period - datetime_timedelta_c.py
+	Datetime Timestamp Limits - datetime_timestamp_a.py
+	Datetime Timezone Pytz - datetime_timezone_a.py
+	Datetime Timezone ZoneInfo - datetime_timezone_b.py
+	JSON Decoder Martian - json_decoder_a.py
+	JSON Encoder Martian - json_encoder_a.py
+	JSON File Dump - json_file_a.py
+	JSON File Load - json_file_b.py
+	JSON Object Dataclass - json_object_b.py
+	JSON Object Factory - json_object_a.py
+	JSON String Dump - json_string_a.py
+	JSON String ListDict - json_string_c.py
+	JSON String ListTuple - json_string_d.py
+	JSON String Load - json_string_b.py
+	RE Find Dates - re_find_a.py
+	RE Match Phones - re_match_a.py
+	RE Qualifier Lazy - re_greedy_a.py
+	RE Search Astronauts - re_search_a.py
+	RE Search Datetime - re_search_d.py
+	RE Search Moon Speech - re_search_b.py
+	RE Search Time - re_search_c.py
+	RE Split Moon Speech - re_split_a.py
+	RE Standards PESEL - re_standards_a.py
+	SQLite3 Fetch CSV - sqlite3_fetch_c.py
+	SQLite3 Fetch Logs - sqlite3_fetch_a.py
+	SQLite3 Fetch Logs - sqlite3_fetch_b.py
+	SQLite3 Join Relations - sqlite3_join_a.py
+
+
