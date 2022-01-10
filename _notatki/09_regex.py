@@ -30,7 +30,10 @@ a == b
 TEXT = 'Yuri Gagarin launched to space on Apr 12th, 1961 at 6:07 am.'
 
 # Qualifier
+
 # Identifier
+# . - dowolny znak
+
 # Negation
 # Quantifier
 # Grouping
@@ -50,3 +53,30 @@ TEXT = 'Yuri Gagarin launched to space on Apr 12th, 1961 at 6:07 am.'
 # (?P<nazwa_zmiennej>...) - keyword group
 # (?:...) non matching group
 # (?#...) comment
+
+# Exact
+# {4}
+
+# Greedy
+# {,4}
+# {4,}
+# {1,4}
+
+# Lazy
+# {,4}?
+# {4,}?
+# {1,4}?
+
+# Greedy Special
+# * - to samo co {0,}
+# + - to samo co {1,}
+# ? - to samo co {0,1}
+
+# Lazy special
+# *?
+# +?
+# ??
+
+re.MULTILINE
+re.IGNORECASE
+re.DOTALL
