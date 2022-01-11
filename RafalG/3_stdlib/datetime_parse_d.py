@@ -43,4 +43,13 @@ DATA = [
 ]
 
 # list[datetime]: DATA elements in datetime format
-result = ...
+result = []
+
+for data in DATA:
+    try:
+        result.append(datetime.strptime(data, "%b %d, %Y %H:%M:%S"))
+    except ValueError:
+        try:
+            result.append(datetime.strptime(data, "%B %d, %Y %H:%M"))
+        except ValueError:
+            result.append(datetime.strptime(data, "%B %d, %Y %H:%M:%S"))

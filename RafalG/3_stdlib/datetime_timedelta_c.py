@@ -63,4 +63,6 @@ YEAR = 365.2425 * DAY
 # 15 seconds
 
 # timedelta: representing given period
-result = ...
+# timedelta(weeks=, days=, hours=, minutes=, seconds=, milliseconds=, microseconds=)
+period_seconds = 8*YEAR + 3*MONTH + 8*DAY + 20*HOUR + 49*MINUTE + 15
+result = timedelta(seconds=period_seconds)
