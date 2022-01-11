@@ -51,4 +51,9 @@ LABEL_ENCODER = {
     '2': 'versicolor'}
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+result = []
+
+for line in DATA.splitlines():
+    row = line.split(',')
+    row[-1] = LABEL_ENCODER.get(row[-1], row[-1])
+    result.append(tuple(row))

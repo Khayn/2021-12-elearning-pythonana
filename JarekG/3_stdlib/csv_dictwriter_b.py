@@ -64,5 +64,18 @@ FILE = r'_temporary.csv'
 
 
 # ContextManager: Write DATA to FILE, generate header from DATA
+
+fieldnames = {field for row in DATA for field in row.keys()}
+fieldnames = sorted(fieldnames)
+
 with open(FILE, mode='w', encoding='utf-8') as file:
-    ...
+    f = csv.DictWriter(
+        file,
+        quotechar='"',
+        delimiter=',',
+        quoting=csv.QUOTE_ALL,
+        lineterminator='\n',
+        fieldnames=fieldnames
+    )
+    f.writeheader()
+    f.writerows(DATA)

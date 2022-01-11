@@ -59,4 +59,16 @@ with open(FILE, mode='w') as file:
     file.write(DATA)
 
 # list[dict]: Using `csv.DictReader` read the `FILE` content
-result = ...
+
+result = []
+
+with open(FILE, mode='rt', encoding="utf-8") as file:
+    f = csv.DictReader(
+        file,
+        delimiter=',',
+        quotechar="'",
+        quoting=csv.QUOTE_ALL
+    )
+    for row in f:
+        values = row.values()
+        result.append(dict(zip(FIELDNAMES, values)))

@@ -48,4 +48,15 @@ DATA = """3,4,setosa,virginica,versicolor
 5.7,2.8,4.1,1.3,2"""
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+
+LABEL_ENCODER = {}
+for label in DATA.splitlines()[0].split(',')[2:]:
+    LABEL_ENCODER[len(LABEL_ENCODER)] = label
+
+
+result = []
+
+for line in DATA.splitlines()[1:]:
+    row = line.split(',')
+    row[-1] = LABEL_ENCODER.get(int(row[-1]), row[-1])
+    result.append(tuple(row))
