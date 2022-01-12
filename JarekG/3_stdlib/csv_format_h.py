@@ -57,4 +57,12 @@ DATA = [
 ]
 
 # str: multiline string with header and `"firstname","lastname"` pairs
-result = ...
+result = ''
+
+for idx, row in enumerate(DATA):
+    if idx == 0:
+        for label in row.keys():
+            result += f'"{label}",'
+        result = result[:-1] + '\n'
+    result += f'''"{row.get('firstname')}","{row.get('lastname')}"\n'''
+    

@@ -51,4 +51,11 @@ DATA = """sepal_length,sepal_width,petal_length,petal_width,species
 5.7,2.8,4.1,1.3,versicolor"""
 
 # list[dict]: replace fieldnames with `FIELDNAMES`
-result = ...
+
+fields = [x for x in DATA.splitlines()[0].split(',')]
+
+result = []
+
+for row in DATA.splitlines()[1:]:
+    row = dict(zip(fields, row.split(',')))
+    result.append(row)

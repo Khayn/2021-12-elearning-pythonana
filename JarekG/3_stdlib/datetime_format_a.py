@@ -28,4 +28,4 @@ from datetime import datetime
 DATA = datetime(1969, 7, 21, 2, 56, 15)
 
 # str: DATA in long US format: 'July 21, 1969 02:56:15 AM'
-result = ...
+result = DATA.strftime("%B %d, %Y %I:%M:%S %p")

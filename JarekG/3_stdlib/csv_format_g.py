@@ -56,4 +56,7 @@ DATA = [
 ]
 
 # str: multiline string with `firstname,lastname` pairs
-result = ...
+result = ''
+
+for row in DATA:
+    result += f'{row.get("firstname")},{row.get("lastname")}\n'

@@ -52,10 +52,10 @@ from datetime import date, datetime, time
 
 
 # datetime: representing April 12th, 1961 6:07 a.m.
-dt = ...
+dt = datetime(1961, 4, 12, 6, 7, 0)
 
 # date: representing April 12th, 1961 6:07 a.m.
-d = ...
+d = date(1961, 4, 12)
 
 # time: representing April 12th, 1961 6:07 a.m.
-t = ...
+t = time(6, 7, 0)
