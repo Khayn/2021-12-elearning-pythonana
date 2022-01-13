@@ -64,3 +64,9 @@ DATA = [
     (7.0, 3.2, 4.7, 1.4, 'versicolor'),
     (7.6, 3.0, 6.6, 2.1, 'virginica'),
     (4.9, 3.0, 1.4, 0.2, 'setosa')]
+
+keys = DATA[0]
+result = [dict(zip(keys, x)) for x in DATA[1:]]
+
+with open(FILE, mode='wt', encoding='utf-8') as file:
+    json.dump(result, file)

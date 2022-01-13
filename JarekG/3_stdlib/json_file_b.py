@@ -65,3 +65,7 @@ with open(FILE, mode='w') as file:
     file.write(DATA)
 
 result: list = []
+
+with open(FILE, mode='rt', encoding='utf-8') as file:
+    for line in json.load(file):
+        result.append(tuple(line.values()))
