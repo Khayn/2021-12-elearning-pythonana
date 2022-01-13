@@ -57,4 +57,31 @@ DATA = [
 ]
 
 # list[dict]: flatten data, each mission field prefixed with mission and number
-result = ...
+result = '"firstname","lastname",'
+tmp = ''
+missions_number = 0
+
+for row in DATA:
+    tmp += f'''"{row.get('firstname')}","{row.get('lastname')}",'''
+    missions_number = (
+        missions_number if missions_number - len(row['missions']) > 0 else
+        len(row['missions']))
+    for mission in row['missions']:
+        tmp += f'''"{mission.get('name', '')}","{mission.get('year', '')}",'''
+    tmp = tmp[:-1] + '\n'
+
+i = 1
+while i <= missions_number:
+    result += f'"mission{i}_name","mission{i}_year",'
+    i += 1
+result = result[:-1] + '\n'
+
+for line in tmp.splitlines():
+    fields = line.split(',')
+    while len(fields) < missions_number * 2 + 2:
+        print(f'pól: {len(fields)}')
+        fields.append(f'""')
+    result += f'{",".join(fields)}\n'
+
+with open(FILE, mode='wt', encoding='utf-8') as file:
+    file.write(result)

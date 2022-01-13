@@ -59,4 +59,8 @@ DATA = [
     (4.9, 3.0, 1.4, 0.2, 'setosa')]
 
 # str: DATA converted to CSV format
-result = ...
+result = ''
+
+for row in DATA:
+    row = [str(x) for x in row]
+    result += f"{','.join(row)}\n"

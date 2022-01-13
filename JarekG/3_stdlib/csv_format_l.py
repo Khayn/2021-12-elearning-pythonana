@@ -65,4 +65,8 @@ DATA = [Iris(5.1, 3.5, 1.4, 0.2, 'setosa'),
         Iris(6.4, 3.2, 4.5, 1.5, 'versicolor')]
 
 # str: DATA converted to CSV format
-result = ...
+result = f'{",".join(str(x) for x in vars(DATA[0]))}\n'
+
+for row in DATA:
+    row = [str(x) for x in vars(row).values()]
+    result += f'{",".join(row)}\n'
