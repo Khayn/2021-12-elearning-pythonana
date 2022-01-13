@@ -65,7 +65,13 @@ PL = {'ą': 'a', 'ć': 'c', 'ę': 'e',
       'ś': 's', 'ż': 'z', 'ź': 'z'}
 
 # str: with letter from user
-letter = ...
+letter = input('Please input letter: ').lower()
+print(letter)
 
 # str: with converted letter without PL diacritic chars
-result = ...
+if letter in PL.keys():
+      result = PL[letter]
+else:
+      result = letter
+
+print(result)

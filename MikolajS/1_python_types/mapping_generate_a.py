@@ -55,4 +55,4 @@ DATA = [
     ('Species', 'virginica')]
 
 # dict[str,float|str]: converted DATA to dict
-result = ...
+result = dict(DATA)
