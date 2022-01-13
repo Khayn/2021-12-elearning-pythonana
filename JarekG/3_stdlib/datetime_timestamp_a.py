@@ -44,10 +44,10 @@ B = '1970-01-01T00:00:00+00:00'
 C = '2038-01-19T03:14:07+00:00'
 
 # float: timestamp of A
-a = ...
+a = datetime.fromisoformat(A).timestamp()
 
 # float: timestamp of B
-b = ...
+b = datetime.fromisoformat(B).timestamp()
 
 # float: timestamp of C
-c = ...
+c = datetime.fromisoformat(C).timestamp()

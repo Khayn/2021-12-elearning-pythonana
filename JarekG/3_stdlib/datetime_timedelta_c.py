@@ -47,7 +47,6 @@ Tests:
 
 from datetime import timedelta
 
-
 SECOND = 1
 MINUTE = 60 * SECOND
 HOUR = 60 * MINUTE
@@ -63,4 +62,5 @@ YEAR = 365.2425 * DAY
 # 15 seconds
 
 # timedelta: representing given period
-result = ...
+result = timedelta(days=(8 * YEAR + 3 * MONTH + 8 * DAY) / DAY,
+                   seconds=20 * HOUR + 49 * MINUTE + 15 * SECOND)
