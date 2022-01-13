@@ -63,12 +63,17 @@ YEAR = 365.2425 * DAY
 
 DATA = timedelta(days=3022, seconds=24609)
 
+year = YEAR/DAY
+month = MONTH/DAY
+days = DATA.days
+sec = DATA.seconds
+
 # dict[str, int]
 result = {
-    'years': ...,
-    'months': ...,
-    'days': ...,
-    'hours': ...,
-    'minutes': ...,
-    'seconds': ...,
+    'years': round(days // year),
+    'months': round((days % year) // month),
+    'days': round((days % year) % month),
+    'hours': round(sec // HOUR),
+    'minutes': round((sec % HOUR) // MINUTE),
+    'seconds': round((sec % HOUR) % MINUTE),
 }

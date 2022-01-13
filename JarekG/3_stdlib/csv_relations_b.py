@@ -80,4 +80,12 @@ FILE = r'_temporary.csv'
 
 
 # list[dict]: Using `csv.DictWriter()` save CREW to CSV file
-result = ...
+result = ''
+
+headers = vars(CREW[0]).keys()
+
+for row in CREW:
+    row = vars(row)
+    result += f'''"{row}'''
+
+W_TRAKCIE =

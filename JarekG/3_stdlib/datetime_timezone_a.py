@@ -135,40 +135,40 @@ from pytz import timezone
 
 
 # timezone in UTC
-utc = ...
+utc = timezone('UTC')
 
 # timezone in London, United Kingdom
-london = ...
+london = timezone('Europe/London')
 
 # timezone in Moscow, Russian Federation
-moscow = ...
+moscow = timezone('Europe/Moscow')
 
 # timezone in Warsaw, Poland
-warsaw = ...
+warsaw = timezone('Europe/Warsaw')
 
 # timezone in Tokyo, Japan
-tokyo = ...
+tokyo = timezone('Asia/Tokyo')
 
 # timezone in Sydney, Australia
-sydney = ...
+sydney = timezone('Australia/Sydney')
 
 # timezone in Auckland, New Zealand
-auckland = ...
+auckland = timezone('Pacific/Auckland')
 
 # timezone in New York, USA
-new_york = ...
+new_york = timezone('America/New_York')
 
 # timezone in Cape Canaveral, FL, USA
-cape_canaveral = ...
+cape_canaveral = timezone('America/New_York')
 
 # timezone in Houston, TX, USA= ...
-houston = ...
+houston = timezone('America/Chicago')
 
 # timezone in Bajkonur Cosmodrome, Kazachstan
-bajkonur = ...
+bajkonur = timezone('Asia/Almaty')
 
 # timezone in North Pole
-north_pole = ...
+north_pole = timezone('UTC')
 
 # timezone in South Pole
-south_pole = ...
+south_pole = timezone('UTC')

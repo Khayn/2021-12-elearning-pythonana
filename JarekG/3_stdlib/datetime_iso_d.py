@@ -41,7 +41,7 @@ Tests:
     'Assign result to variable: `result`'
     >>> assert type(result) is list, \
     'Variable `result` has invalid type, must be a list'
-    >>> assert all(type(row) is dict for row in result), \
+    >>> assert all(type(line) is dict for row in result), \
     'All elements in result must be dict'
 
     >>> result  # doctest: +NORMALIZE_WHITESPACE
@@ -163,4 +163,12 @@ DATA = """1969-07-14, 21:00:00, INFO, Terminal countdown started
 1969-07-24, 17:29, INFO, Crew egress"""
 
 # list[dict]: representation of DATA; dict keys: when, level, message
-result = ...
+result = []
+
+for line in DATA.splitlines():
+    *date, level, message = line.split(', ', maxsplit=3)
+    result.append({
+        'when': datetime.fromisoformat('T'.join(date)),
+        'level': level,
+        'message': message
+    })

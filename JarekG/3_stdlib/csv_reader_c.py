@@ -52,4 +52,15 @@ with open(FILE, mode='w') as file:
     file.write(DATA)
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+result = []
+
+with open(FILE, mode='rt', encoding='utf-8') as file:
+    csv_file = csv.reader(file, delimiter=',')
+    first_line = True
+    for line in csv_file:
+        if first_line:
+            labels = {k: v for k, v in enumerate(line[2:])}
+            first_line = False
+            continue
+        line[-1] = labels.get(int(line[-1]))
+        result.append(tuple(line))

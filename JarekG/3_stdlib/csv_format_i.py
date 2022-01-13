@@ -59,4 +59,17 @@ DATA = [
 ]
 
 # str: header has unique keys from DATA, row values match header columns
-result = ...
+result = ''
+
+labels = {x for row in DATA for x in row.keys()}
+labels = sorted(labels)
+
+for label in labels:
+    result += f'"{label}",'
+
+result = result[:-1] + '\n'
+
+for row in DATA:
+    for label in labels:
+        result += f'''"{row.get(label, '')}",'''
+    result = result[:-1] + '\n'
