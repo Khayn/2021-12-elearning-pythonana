@@ -50,7 +50,7 @@ Tests:
 
 import json
 import re
-from datetime import datetime
+from datetime import datetime, date, time, timedelta
 
 
 DATA = """
@@ -94,3 +94,19 @@ class Decoder(json.JSONDecoder):
 
 decoder = Decoder()
 result = decoder.decode(DATA)
+
+
+class MyDecoder(json.JSONDecoder):
+    def __init__(self):
+        super().__init__(object_hook=lambda data: {
+                field: self.default(field, value)
+                for field, value in data.items()})
+
+    def default(self, field, value):
+        result = {
+            'born': lambda x: date.fromisoformat(x),
+            'launch': lambda x: datetime.fromisoformat(x),
+            'landing': lambda x: time.fromisoformat(x),
+            'duration': lambda x: timedelta(days=x),
+        }.get(field, value)
+        return result(value) if callable(result) else result

@@ -60,9 +60,16 @@ DATA = {'mission': 'Ares 3',
             {'name': 'Mark Watney', 'born': date(1994, 10, 12)}]}
 
 
-class Encoder:
-    ...
+class Encoder(json.JSONEncoder):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def default(self, obj):
+        return obj.isoformat()
 
 
 # str: JSON encoded DATA
-result = ...
+
+encoder = Encoder()
+
+result = encoder.encode(DATA)
