@@ -49,6 +49,7 @@ Tests:
 """
 
 import json
+import re
 from datetime import datetime
 
 
@@ -66,9 +67,30 @@ DATA = """
               {"name": "Mark Watney", "born": "1994-10-12"}]}"""
 
 
-class Decoder:
-    ...
+class Decoder(json.JSONDecoder):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs, object_hook=self.default)
 
+    @staticmethod
+    def str2date(date):
+        if ':' in date:
+            return datetime.fromisoformat(date)
+        else:
+            return datetime.fromisoformat(date).date()
+
+    def default(self, data: dict) -> dict:
+        date = r'\d{4}-\d{2}-\d{2}'
+        time = r'\d{2}:\d{2}:\d{2}'
+        pattern = rf'^({date})(T{time})?$'
+        for key, value in data.items():
+            if not isinstance(value, str):
+                continue
+            if re.search(pattern, value):
+                data[key] = self.str2date(value)
+        return data
 
 # dict[str, str|list|datetime]: with decoded DATA
-result = ...
+
+
+decoder = Decoder()
+result = decoder.decode(DATA)
