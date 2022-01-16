@@ -57,4 +57,11 @@ DATA = [
 ]
 
 # str: multiline string with header and `"firstname","lastname"` pairs
-result = ...
+result = ""
+
+firstname, lastname = DATA[0].keys()
+result += f'"{firstname}","{lastname}"\n'
+
+for line in DATA:
+    firstname, lastname = line.values()
+    result += f'"{firstname}","{lastname}"\n'

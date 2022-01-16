@@ -59,4 +59,11 @@ with open(FILE, mode='w') as file:
     file.write(DATA)
 
 # list[dict]: Using `csv.DictReader` read the `FILE` content
-result = ...
+result = []
+
+with open(FILE, "rt", encoding="utf-8") as f:
+    file = csv.DictReader(f, fieldnames=FIELDNAMES, delimiter=",", quotechar="'")
+    header = next(file)  # file is generator
+
+    for line in file:
+        result.append(line)

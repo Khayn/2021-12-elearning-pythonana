@@ -45,4 +45,14 @@ DATA = """sepal_length,sepal_width,petal_length,petal_width,species
 5.7,2.8,4.1,1.3,versicolor"""
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+result = []
+
+header, *data = DATA.splitlines()
+header = header.strip().split(",")
+result.append(tuple(header))
+
+for line in data:
+    *X, y = line.strip().split(",")
+    X = list(map(float, X))
+    modified_line = X + [y]
+    result.append(tuple(modified_line))

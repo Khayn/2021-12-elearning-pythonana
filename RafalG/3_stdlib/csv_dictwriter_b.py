@@ -62,7 +62,13 @@ DATA = [{'Sepal length': 5.1, 'Sepal width': 3.5, 'Species': 'setosa'},
 
 FILE = r'_temporary.csv'
 
+header = set()
+
+for row in DATA:
+    header.update(row.keys())
 
 # ContextManager: Write DATA to FILE, generate header from DATA
 with open(FILE, mode='w', encoding='utf-8') as file:
-    ...
+    f = csv.DictWriter(file, fieldnames=sorted(header), delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL, lineterminator='\n')
+    f.writeheader()
+    f.writerows(DATA)

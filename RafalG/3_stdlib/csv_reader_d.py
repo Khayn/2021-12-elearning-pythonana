@@ -55,4 +55,13 @@ with open(FILE, mode='w') as file:
 
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+result = []
+
+with open(FILE, "r") as file:
+    header = file.readline().strip().split(",")
+    result.append(tuple(header))
+
+    f = csv.reader(file)
+    for *X, y in f:
+        X = map(float, X)
+        result.append(tuple(X) + (y,))

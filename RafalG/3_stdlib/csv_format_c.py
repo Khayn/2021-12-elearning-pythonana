@@ -48,4 +48,16 @@ DATA = """3,4,setosa,virginica,versicolor
 5.7,2.8,4.1,1.3,2"""
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+result = []
+
+header, *data = DATA.splitlines()
+
+_, _, *species = header.strip().split(",")
+
+LABEL_ENCODER = dict(enumerate(species))
+
+for line in data:
+    *values, code = line.strip().split(",")
+    code = LABEL_ENCODER.get(int(code))
+    modified_line = values + [code]
+    result.append(tuple(modified_line))

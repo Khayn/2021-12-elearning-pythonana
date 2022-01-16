@@ -61,6 +61,10 @@ DATA = [{'firstname': 'Jan', 'lastname': 'Twardowski'},
 
 FILE = r'_temporary.csv'
 
+header = DATA[0].keys()
+
 # ContextManager: Write DATA to FILE, generate header from DATA
 with open(FILE, mode='w') as file:
-    ...
+    f = csv.DictWriter(file, fieldnames=header, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL, lineterminator='\n')
+    f.writeheader()
+    f.writerows(DATA)

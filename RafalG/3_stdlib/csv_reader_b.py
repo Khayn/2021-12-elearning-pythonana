@@ -56,4 +56,11 @@ with open(FILE, mode='w') as file:
     file.write(DATA)
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+result = []
+
+with open(FILE, "r") as file:
+    f = csv.reader(file)
+
+    for *X, y in f:
+        y = SPECIES[int(y)]
+        result.append(tuple(X) + (y,))

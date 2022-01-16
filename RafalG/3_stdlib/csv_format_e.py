@@ -55,4 +55,8 @@ HEADER = [
 ]
 
 # list[dict[str,str]]: replace keys with `HEADER`
-result = ...
+result = []
+
+for line in DATA.splitlines():
+    data = line.strip().split(",")
+    result.append(dict(zip(HEADER, data)))

@@ -60,4 +60,9 @@ DATA = [{'sepal_length': 5.1, 'sepal_width': 3.5, 'petal_length': 1.4,
          'petal_width': 1.5, 'species': 'versicolor'}]
 
 # str: DATA converted to CSV format
-result = ...
+result = ""
+
+result += ",".join(DATA[0].keys()) + "\n"
+
+for row in DATA:
+    result += ",".join(map(str, row.values())) + "\n"

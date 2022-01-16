@@ -51,4 +51,10 @@ LABEL_ENCODER = {
     '2': 'versicolor'}
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+result = []
+
+for line in DATA.splitlines():
+    *X, y = line.strip().split(",")
+    y = LABEL_ENCODER.get(y, y)
+    modified_line = X + [y]
+    result.append(tuple(modified_line))

@@ -52,4 +52,17 @@ with open(FILE, mode='w') as file:
     file.write(DATA)
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+result = []
+
+with open(FILE, "r") as file:
+    header = file.readline().strip().split(",")[2:]
+    header = dict(enumerate(header))
+
+    f = csv.reader(file, lineterminator="\n")
+
+    # header = next(f)
+    # header = dict(enumerate(header[2:]))
+
+    for *X, y in f:
+        y = header.get(int(y))
+        result.append(tuple(X) + (y,))

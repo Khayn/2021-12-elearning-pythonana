@@ -59,4 +59,17 @@ DATA = [
 ]
 
 # str: header has unique keys from DATA, row values match header columns
-result = ...
+result = ""
+
+keys = set()
+
+for row in DATA:
+    keys.update(row.keys())
+
+header = sorted(list(keys))
+
+result += ",".join(f'"{element}"' for element in header) + "\n"
+
+for row in DATA:
+    line = [row.get(element, "") for element in header]
+    result += ",".join(f'"{x}"' for x in line) + "\n"

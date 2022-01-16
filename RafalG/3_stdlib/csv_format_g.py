@@ -56,4 +56,14 @@ DATA = [
 ]
 
 # str: multiline string with `firstname,lastname` pairs
-result = ...
+result = ""
+
+for line in DATA:
+    firstname, lastname = line.values()
+    result += f"{firstname},{lastname}\n"
+
+    # result += line["firstname"] + "," + line["lastname"] + "\n"
+
+    # for row in DATA:
+    #     row = ','.join(row.values())
+    #     result += str(row) + '\n'
