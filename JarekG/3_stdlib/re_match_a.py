@@ -60,10 +60,10 @@ import re
 
 
 # str: pattern matching `+## ### ### ###`
-cell = ...
+cell = r'^\+\d{2}( \d{3}){3}$'
 
 # str: pattern matching `+## ## ### ####`
-work = ...
+work = r'^\+(\d{2} ){2}\d{3} \d{4}$'
 
 # str: combination of `+## ### ### ###` and `+## ## ### ####`
-result = ...
+result = rf'{cell}|{work}'

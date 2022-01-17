@@ -67,4 +67,7 @@ TEXT = ("<h1>TEXT OF PRESIDENT JOHN KENNEDY'S RICE STADIUM MOON SPEECH</h1>\n"
 
 
 # str: use re.split() to get paragraph "We choose to go to the moon"
-result = ...
+
+for sentence in re.split(r'</?p>', TEXT):
+    if sentence.startswith('We choose'):
+        result = sentence

@@ -42,7 +42,6 @@ Tests:
 
 import re
 
-
 TEXT = ("<h1>TEXT OF PRESIDENT JOHN KENNEDY'S RICE STADIUM MOON SPEECH</h1>\n"
         "<p>President Pitzer, Mr. Vice President, Governor, "
         "CongressmanThomas, Senator Wiley, and Congressman Miller, Mr. Webb, "
@@ -69,6 +68,6 @@ TEXT = ("<h1>TEXT OF PRESIDENT JOHN KENNEDY'S RICE STADIUM MOON SPEECH</h1>\n"
         "Canaveral as tall as a48 story structure, as wide as a city block, "
         "and as long as two lengths of this field.</p>")
 
-
 # str: use re.search() to get paragraph starting with "We choose..."
-result = ...
+start, stop = re.search(r'<p>We choose.*?</p>', TEXT).span()
+result = TEXT[start + 3: stop - 4]

@@ -56,8 +56,7 @@ PATTERN = r'^\d{11}$'
 
 
 def is_pesel_valid(pesel: str) -> bool:
-    ...
-
+    return bool(re.match(PATTERN, pesel))
 
 def is_pesel_woman(pesel: str) -> bool:
     """
@@ -65,4 +64,4 @@ def is_pesel_woman(pesel: str) -> bool:
     If the second to last number is even,
     then PESEL is woman's, in other case PESEL is man's.
     """
-    ...
+    return bool(re.match(r'[24680]', pesel[9]))

@@ -82,4 +82,23 @@ class Versicolor(Iris):
     pass
 
 
+matrix = {
+    'virginica': Virginica,
+    'setosa': Setosa,
+    'versicolor': Versicolor,
+}
+
 result: list = []
+
+data = json.loads(DATA)
+
+
+for row in data:
+    Iris_class = matrix.get(row['species'])
+    iris = Iris_class(
+        sepalLength=row.get('sepalLength', None),
+        sepalWidth=row.get('sepalWidth', None),
+        petalLength=row.get('petalLength', None),
+        petalWidth=row.get('petalWidth', None))
+    result.append(iris)
+

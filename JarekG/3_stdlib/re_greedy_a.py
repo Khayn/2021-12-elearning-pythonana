@@ -63,4 +63,4 @@ TEXT = ("<h1>TEXT OF PRESIDENT JOHN KENNEDY'S RICE STADIUM MOON SPEECH</h1>\n"
 
 
 # str: use findall() and non-greedy qualifier to get paragraph "We choose..."
-result = ...
+result = re.findall(r'<p>(We choose.*?)</p>', TEXT)[0]

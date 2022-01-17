@@ -55,4 +55,6 @@ DATA = [
 
 
 # str: convert DATA to as list[dict] and convert to JSON format
-result = ...
+
+data = [dict(zip(DATA[0], row)) for row in DATA[1:]]
+result = json.dumps(data)

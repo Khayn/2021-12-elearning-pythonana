@@ -98,4 +98,10 @@ TEXT = ("In the late 1950s and early 1960s, the United States was engaged in "
 
 
 # re.Match: use re.findall() to get dates in US format, i.e. "April 12, 1961"
-result = ...
+
+month = r'[ADFJMNOS]\w{2,8}'
+day = r'\d\d?'
+year = r'\d{4}'
+pattern = rf'{month} {day}, {year}'
+
+result = re.findall(pattern, TEXT)
