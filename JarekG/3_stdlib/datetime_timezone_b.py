@@ -134,40 +134,40 @@ from zoneinfo import ZoneInfo
 
 
 # ZoneInfo: timezone in UTC
-utc = ...
+utc = ZoneInfo('UTC')
 
 # ZoneInfo: timezone in London, United Kingdom
-london = ...
+london = ZoneInfo('Europe/London')
 
 # ZoneInfo: timezone in Moscow, Russian Federation
-moscow = ...
+moscow = ZoneInfo('Europe/Moscow')
 
 # ZoneInfo: timezone in Warsaw, Poland
-warsaw = ...
+warsaw = ZoneInfo('Europe/Warsaw')
 
 # ZoneInfo: timezone in Tokyo, Japan
-tokyo = ...
+tokyo = ZoneInfo('Asia/Tokyo')
 
 # ZoneInfo: timezone in Sydney, Australia
-sydney = ...
+sydney = ZoneInfo('Australia/Sydney')
 
 # ZoneInfo: timezone in Auckland, New Zealand
-auckland = ...
+auckland = ZoneInfo('Pacific/Auckland')
 
 # ZoneInfo: timezone in New York, USA
-new_york = ...
+new_york = ZoneInfo('America/New_York')
 
 # ZoneInfo: timezone in Cape Canaveral, FL, USA
-cape_canaveral = ...
+cape_canaveral = ZoneInfo('America/New_York')
 
 # ZoneInfo: timezone in Houston, TX, USA= ...
-houston = ...
+houston = ZoneInfo('America/Chicago')
 
 # ZoneInfo: timezone in Bajkonur Cosmodrome, Kazachstan
-bajkonur = ...
+bajkonur = ZoneInfo('Asia/Almaty')
 
 # ZoneInfo: timezone in North Pole
-north_pole = ...
+north_pole = ZoneInfo('Arctic/Longyearbyen')
 
 # ZoneInfo: timezone in South Pole
-south_pole = ...
+south_pole = ZoneInfo('Asia/Tokyo')
