@@ -72,20 +72,20 @@ DATA = """4.3,3.0,1.1,0.1,0
 SQL_CREATE_TABLE = """
     CREATE TABLE IF NOT EXISTS iris (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        species TEXT,
         sepal_length REAL,
         sepal_width REAL,
         petal_length REAL,
-        petal_width REAL);"""
+        petal_width REAL,
+        species TEXT);"""
 
 SQL_INSERT = """
     INSERT INTO iris VALUES (
         NULL,
-        :species,
         :sepal_length,
         :sepal_width,
         :petal_length,
-        :petal_width);"""
+        :petal_width,
+        :species);"""
 
 SQL_SELECT = """
     SELECT *
@@ -103,4 +103,22 @@ with open(FILE, mode='w') as file:
 #                'sepal_width': 3.9,
 #                'petal_length': 1.3,
 #                'petal_width': 0.4}, ...]
-result = ...
+
+irises = []
+with open(FILE, mode='rt', encoding='utf-8') as file:
+    for line in file.readlines():
+        line = [float(x) for x in line.split(',')]
+        line[-1] = (SPECIES.get(line[-1]))
+        irises.append(tuple(line))
+
+
+result = []
+
+
+with sqlite3.connect(DATABASE) as db:
+    db.row_factory = sqlite3.Row
+    cursor = db.cursor()
+    cursor.execute(SQL_CREATE_TABLE)
+    cursor.executemany(SQL_INSERT, irises)
+    for row in cursor.execute(SQL_SELECT):
+        result.append(dict(row))
