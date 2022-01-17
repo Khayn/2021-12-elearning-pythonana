@@ -133,4 +133,22 @@ SQL_SELECT = """
 #                'astronaut_id': 1, 'street': '2101 E NASA Pkwy', 'city':
 #                'Houston', 'state': 'Texas', 'code': 77058, 'country': 'USA'},
 #               ...]
-result = ...
+result = []
+
+with sqlite3.connect(DATABASE) as db:
+    db.row_factory = sqlite3.Row
+    cursor = db.cursor()
+    cursor.execute(SQL_CREATE_TABLE_ADDRESS)
+    cursor.execute(SQL_CREATE_TABLE_ASTRONAUT)
+    cursor.execute(SQL_CREATE_INDEX_ASTRONAUT_LASTNAME)
+    for data in DATA:
+        cursor.execute(SQL_INSERT_ASTRONAUT, (
+            data.get('firstname'),
+            data.get('lastname')
+        ))
+        row_id = cursor.lastrowid
+        for address in data.get('addresses'):
+            address['astronaut_id'] = row_id
+            cursor.execute(SQL_INSERT_ADDRESS, address)
+    for row in cursor.execute(SQL_SELECT):
+        result.append(dict(row))
