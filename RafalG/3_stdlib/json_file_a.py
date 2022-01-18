@@ -64,3 +64,9 @@ DATA = [
     (7.0, 3.2, 4.7, 1.4, 'versicolor'),
     (7.6, 3.0, 6.6, 2.1, 'virginica'),
     (4.9, 3.0, 1.4, 0.2, 'setosa')]
+
+header, *data = DATA
+data = [dict(zip(header, row)) for row in data]
+
+with open(FILE, "w") as file:
+    json.dump(data, file)

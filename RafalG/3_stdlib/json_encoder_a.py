@@ -60,9 +60,10 @@ DATA = {'mission': 'Ares 3',
             {'name': 'Mark Watney', 'born': date(1994, 10, 12)}]}
 
 
-class Encoder:
-    ...
+class Encoder(json.JSONEncoder):
+    def default(self, value: datetime) -> str:  # statyczne typowanie
+        return value.isoformat()
 
 
 # str: JSON encoded DATA
-result = ...
+result = json.dumps(DATA, cls=Encoder)

@@ -83,3 +83,9 @@ class Versicolor(Iris):
 
 
 result: list = []
+
+for row in json.loads(DATA):
+    species = row.pop("species").capitalize()
+    cls = globals()[species]
+    # The globals() method returns the dictionary of the current global symbol table.
+    result.append(cls(**row))

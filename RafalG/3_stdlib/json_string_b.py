@@ -52,4 +52,4 @@ DATA = """[{"Sepal length": 5.8, "Sepal width": 2.7, "Petal length": 5.1, "Petal
 
 
 # list[dict]: Load `DATA` from JSON format
-result = ...
+result = json.loads(DATA)
