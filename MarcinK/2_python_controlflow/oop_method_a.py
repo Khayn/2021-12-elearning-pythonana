@@ -29,3 +29,9 @@ Tests:
     >>> calc.add(1, 2)
     3
 """
+
+class Calculator:
+    def add(self, a, b):
+        self.a = a
+        self.b = b
+        return a + b
