@@ -82,10 +82,27 @@ FILE = r'_temporary.csv'
 # list[dict]: Using `csv.DictWriter()` save CREW to CSV file
 result = ''
 
-headers = vars(CREW[0]).keys()
 
-for row in CREW:
-    row = vars(row)
-    result += f'''"{row}'''
+for line in CREW:
+    if line.missions:
+        m = []
+        for mission in line.missions:
+            vals = [str(x) for x in vars(mission).values()]
+            m.append(','.join(vals))
+        line.missions = ';'.join(m)
+    else:
+        line.missions = ''
 
-W_TRAKCIE =
+headers = [str(x) for x in vars(CREW[0]).keys()]
+
+with open(FILE, mode='wt', encoding='utf-8') as file:
+    output = csv.DictWriter(
+        file,
+        fieldnames=headers,
+        delimiter=',',
+        quoting=csv.QUOTE_ALL,
+        lineterminator='\n',
+        quotechar='"')
+    output.writeheader()
+    output.writerows([vars(x) for x in CREW])
+
