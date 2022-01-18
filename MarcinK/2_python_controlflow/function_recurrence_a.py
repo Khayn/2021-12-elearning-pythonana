@@ -44,15 +44,7 @@ def fib(n):
     if n <= 1:
         return 1
     else:
+        return fib(n-1) + fib(n-2)
 
-        n1 = 0
-        n2 = 1
-        count = 0
 
-        while count <= n:
-            nth = n1 + n2
-            n1 = n2
-            n2 = nth
-            count += 1
-
-    return n1
+print([fib(x) for x in range(10)])
