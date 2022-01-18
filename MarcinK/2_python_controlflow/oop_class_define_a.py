@@ -19,3 +19,6 @@ Tests:
 
     >>> assert isclass(Iris)
 """
+
+def Iris():
+    pass

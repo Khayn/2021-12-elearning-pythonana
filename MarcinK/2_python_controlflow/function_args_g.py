@@ -35,7 +35,7 @@ Tests:
     [0, 1, 2, 3, 4]
 """
 
-def myrange(start, stop, step=1):
+def myrange(start, stop, step = 1):
 
     mySequence = []
     while start < stop:
