@@ -77,3 +77,6 @@ class Iris:
 
     def get_numeric_values(self):
         return [x for x in vars(self).values() if type(x) is float]
+
+    def show(self):
+        return print('dupa')
