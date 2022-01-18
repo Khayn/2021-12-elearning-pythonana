@@ -52,17 +52,21 @@ stop = 33
 numbers = [x for x in range(start, stop+1) if x % 3 == 0]
 print(numbers)
 
+
 def odd(number):
     if number % 2 == 1:
         return True
     else:
         return False
 
+
 numbers = list(filter(odd, numbers))
 print(numbers)
 
+
 def cube(number):
     return number ** 3
+
 
 numbers = list(map(cube, numbers))
 print(numbers)

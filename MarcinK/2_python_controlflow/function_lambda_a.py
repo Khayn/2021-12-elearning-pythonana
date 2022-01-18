@@ -36,7 +36,12 @@ def cube(x):
 
 
 numbers = (x for x in range(1, 34) if x % 3 == 0)
-numbers = filter(odd, numbers)
-numbers = map(cube, numbers)
+
+numbers = filter(lambda odd: odd % 2, numbers)
+
+numbers = map(lambda cube: cube ** 3, numbers)
+
 numbers = list(numbers)
 result = sum(numbers) / len(numbers)
+print(numbers)
+
