@@ -163,4 +163,12 @@ DATA = """1969-07-14, 21:00:00, INFO, Terminal countdown started
 1969-07-24, 17:29, INFO, Crew egress"""
 
 # list[dict]: representation of DATA; dict keys: when, level, message
-result = ...
+result = []
+
+for line in DATA.splitlines():
+    date_apollo, time_apollo, level, message = line.split(", ", 3)
+    data = dict()
+    data["when"] = datetime.combine(date.fromisoformat(date_apollo), time.fromisoformat(time_apollo))
+    data["level"] = level
+    data["message"] = message
+    result.append(data)

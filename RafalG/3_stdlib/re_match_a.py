@@ -60,10 +60,10 @@ import re
 
 
 # str: pattern matching `+## ### ### ###`
-cell = ...
+cell = r"\+[0-9]{2} [0-9]{3} [0-9]{3} [0-9]{3}"
 
 # str: pattern matching `+## ## ### ####`
-work = ...
+work = r"\+[0-9]{2} [0-9]{2} [0-9]{3} [0-9]{4}"
 
 # str: combination of `+## ### ### ###` and `+## ## ### ####`
-result = ...
+result = f"^({cell}|{work})$"
