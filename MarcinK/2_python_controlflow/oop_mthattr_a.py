@@ -37,3 +37,14 @@ DATA = [
 ]
 
 result = {}
+
+
+class Iris:
+    def __init__(self, features, label):
+        self.feeatures = features
+        self.label = label
+    def sum(self, features):
+        self.feeatures = features
+        return sum(features)
+
+

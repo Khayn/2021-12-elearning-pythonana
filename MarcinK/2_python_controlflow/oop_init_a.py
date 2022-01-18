@@ -34,3 +34,14 @@ Tests:
     >>> vars(result)
     {}
 """
+
+class Echo:
+    def __init__(self, text):
+        Echo.text = text
+        print(text)
+
+
+_ = Echo('hello')
+_ = Echo('world')
+result = Echo('Test')
+

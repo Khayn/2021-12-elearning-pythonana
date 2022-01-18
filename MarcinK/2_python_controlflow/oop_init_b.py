@@ -37,19 +37,20 @@ Tests:
 # NASA, USA, 1958-07-29
 
 class Astronaut:
-    pass
+    def __init__(self, name, country, date):
+        self.name = name
+        self.country = country
+        self.date = date
+
 
 
 class SpaceAgency:
-    pass
+    def __init__(self, name, country, date):
+        self.name = name
+        self.country = country
+        self.date = date
 
 
-watney = Astronaut()
-watney.name = 'Watney'
-watney.country = 'USA'
-watney.date = '1969-07-21'
+watney = Astronaut('Watney', 'USA', '1969-07-21')
 
-nasa = SpaceAgency()
-nasa.name = 'NASA'
-nasa.country = 'USA'
-nasa.date = '1958-07-29'
+nasa = SpaceAgency(name='NASA', country='USA', date='1958-07-29')

@@ -20,6 +20,6 @@ Tests:
     >>> assert isclass(Iris)
 """
 
-class Iris():
+class Iris:
     pass
 
