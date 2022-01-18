@@ -79,4 +79,8 @@ class Iris:
         return [x for x in vars(self).values() if type(x) is float]
 
     def show(self):
-        return print('dupa')
+
+        total = sum(Iris.get_numeric_values(self))
+        mean = total/len(Iris.get_numeric_values(self))
+        result = str(f'{total=:.2f} {mean=:.2f} {self.species}')
+        return result
