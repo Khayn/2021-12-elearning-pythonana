@@ -31,6 +31,6 @@ Tests:
 FILE = '_temporary.txt'
 DATA = 'hello world\n'
 
-file = open(FILE, mode='wt')
-file.write(DATA)
-file.close()
+with open(FILE, mode='wt') as file:
+    file.write(DATA)
+

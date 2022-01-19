@@ -37,8 +37,8 @@ DATA = [
     ('5.7', '2.8', '4.1', '1.3'),
 ]
 
-file = open(FILE, mode='wt')
-DATA = ''.join(DATA)
+data = '\n'.join(','.join(data) for data in DATA) + '\n'
+print(data)
 
-file.write(DATA)
-file.close()
+with open(FILE, mode='wt') as file:
+    file.write(data)

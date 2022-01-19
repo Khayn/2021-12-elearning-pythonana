@@ -39,9 +39,8 @@ DATA = """127.0.0.1       localhost
 ::1             localhost
 """
 
-file = open(FILE, mode='wt')
-file.write(DATA)
-file.close()
+with open(FILE, mode='wt') as file:
+    file.write(DATA)
 
 result = open(FILE).read()
 print(result)

@@ -32,8 +32,12 @@ Tests:
 
 FILE = '_temporary.txt'
 DATA = (5.1, 3.5, 1.4, 0.2, 'setosa')
+data = ','.join(str(x) for x in DATA) + '\n'
 
-file = open(FILE, mode='wt')
-DATA = ''.join(str(DATA))
-file.write(DATA)
-file.close()
+
+with open(FILE, mode='wt') as file:
+    file.write(data)
+
+
+
+
