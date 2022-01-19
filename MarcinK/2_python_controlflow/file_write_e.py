@@ -36,3 +36,9 @@ DATA = [
     ('5.1', '3.5', '1.4', '0.2'),
     ('5.7', '2.8', '4.1', '1.3'),
 ]
+
+file = open(FILE, mode='wt')
+DATA = ''.join(DATA)
+
+file.write(DATA)
+file.close()

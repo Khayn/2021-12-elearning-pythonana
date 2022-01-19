@@ -29,4 +29,8 @@ Tests:
 """
 
 FILE = '_temporary.txt'
-DATA = 'hello world'
+DATA = 'hello world\n'
+
+file = open(FILE, mode='wt')
+file.write(DATA)
+file.close()

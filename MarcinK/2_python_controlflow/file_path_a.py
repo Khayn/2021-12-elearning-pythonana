@@ -38,7 +38,12 @@ Tests:
     >>> result('_notexisting.txt')
     File not found
 """
+from pathlib import Path
 
 
 def result(filename):
-    ...
+    try:
+        Path.exists(filename)
+    except FileNotFoundError:
+        print("File not found")
+

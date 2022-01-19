@@ -30,4 +30,9 @@ Tests:
 """
 
 FILE = '_temporary.txt'
-DATA = ['hello', 'world']
+DATA = ['hello', 'world\n']
+
+file = open(FILE, mode='wt')
+DATA = '\n'.join(DATA)
+file.write(DATA)
+file.close()
