@@ -63,4 +63,11 @@ TEXT = ("<h1>TEXT OF PRESIDENT JOHN KENNEDY'S RICE STADIUM MOON SPEECH</h1>\n"
 
 
 # str: use findall() and non-greedy qualifier to get paragraph "We choose..."
-result = ...
+result = ""
+
+# PATTERN = r"<.*?>"  # with <h1>, </h1>
+PATTERN = r"<p>(.*?)</p>"
+
+for paragraph in re.split(PATTERN, TEXT):
+    if paragraph.startswith("We choose to go"):
+        result += paragraph
