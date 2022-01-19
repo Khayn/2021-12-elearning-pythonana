@@ -37,3 +37,9 @@ class Iris:
     def __init__(self, data):
         self.features = list(data[:-1])
         self.label = str(data[-1])
+
+    def __repr__(self):
+        return str(f'Iris(features={self.features}, label=\'{self.label}\')')
+
+iris = Iris(DATA)
+print(repr(iris))

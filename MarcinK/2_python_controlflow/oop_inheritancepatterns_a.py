@@ -33,3 +33,20 @@ Tests:
     >>> assert len(Rocket.__subclasses__()) == 1
     >>> assert len(MarsMission.__subclasses__()) == 0
 """
+
+
+class Habitat:
+    pass
+
+
+class Rocket:
+    pass
+
+
+class Astronaut:
+    pass
+
+
+class MarsMission(Habitat, Rocket, Astronaut):
+    pass
+

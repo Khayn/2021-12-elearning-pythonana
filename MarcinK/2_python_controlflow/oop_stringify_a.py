@@ -37,3 +37,9 @@ class Iris:
     def __init__(self, features, label):
         self.features = features
         self.label = label
+
+    def sum(self):
+        return sum(self.features)
+
+    def __str__(self):
+        return f'{self.label} {self.sum():.1f}'
