@@ -66,9 +66,18 @@ DATA = """
               {"name": "Mark Watney", "born": "1994-10-12"}]}"""
 
 
-class Decoder:
-    ...
+class Decoder(json.JSONDecoder):
+    def __init__(self):
+        super().__init__(object_hook=self.default)
+
+    def default(self, data: dict) -> dict:
+        for key, value in data.items():
+            if key in ("launch_date", "destination_landing"):
+                data[key] = datetime.fromisoformat(value)
+            elif key == "born":
+                data[key] = datetime.fromisoformat(value).date()
+        return data
 
 
 # dict[str, str|list|datetime]: with decoded DATA
-result = ...
+result = json.loads(DATA, cls=Decoder)

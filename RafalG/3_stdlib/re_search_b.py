@@ -71,4 +71,4 @@ TEXT = ("<h1>TEXT OF PRESIDENT JOHN KENNEDY'S RICE STADIUM MOON SPEECH</h1>\n"
 
 
 # str: use re.search() to get paragraph starting with "We choose..."
-result = ...
+result = re.search("<p>(We choose [A-Za-z,. ]+)</p>", TEXT).group(1)

@@ -52,7 +52,7 @@ from pathlib import Path
 FILENAME = 'myfile.txt'
 
 # Path: Absolute path to FILENAME
-abspath = ...
+abspath = Path(Path.cwd(), FILENAME)
 
 # str: file, directory or missing
-result = ...
+result = f'{Path.is_file(abspath)} {Path.is_dir(abspath)} {Path.exists(abspath)}'

@@ -91,24 +91,27 @@ TEXT = ("Apollo 11 was the spaceflight that first landed humans on the Moon. "
 
 # use re.search() to get 'Neil Armstrong' a (start, end) position or None
 # tuple[int,int]
-a = ...
+# a = re.search(r"[A-Z][a-z]{3} [A-Z][a-z]{8}", TEXT).span()
+a = re.search("Neil Armstrong", TEXT).span()
 
 # use re.search() to get 'Buzz Aldrin' a (start, end) position or None
 # tuple[int,int]
-b = ...
+# b = re.search(r"[A-Z][a-z]{3} [A-Z][a-z]{5}", TEXT).span()
+b = re.search("Buzz Aldrin", TEXT).span()
 
 # use re.search() to get 'Michael Collins' a (start, end) position or None
 # tuple[int,int]
-c = ...
+# c = re.search(r"[A-Z][a-z]{6} [A-Z][a-z]{6}", TEXT).span()
+c = re.search("Michael Collins", TEXT).span()
 
 # use re.search() to get 'July 21 at 02:56 UTC' a (start, end) position or None
 # tuple[int,int]
-d = ...
+d = re.search("July 21 at 02:56 UTC", TEXT).span()
 
 # use re.search() to get 'Tranquility Base' a (start, end) position or None
 # tuple[int,int]
-e = ...
+e = re.search("Tranquility Base", TEXT).span()
 
 # use re.search() to get 'Mark Watney' a (start, end) position or None
 # tuple[int,int]
-f = ...
+f = re.search("Mark Watney", TEXT)

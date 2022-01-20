@@ -52,4 +52,8 @@ DATA = """[{"Sepal length": 5.8, "Sepal width": 2.7, "Petal length": 5.1, "Petal
 
 
 # list[tuple]: load DATA from JSON and convert to list[tuple]
-result = ...
+# result = ...
+
+data = json.loads(DATA)
+
+result = [tuple(row.values()) for row in data]

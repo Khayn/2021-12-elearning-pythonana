@@ -40,3 +40,16 @@ DATA = [
     (6.4, 3.2, 4.5, 1.5, 'versicolor'),
     (4.7, 3.2, 1.3, 0.2, 'setosa'),
 ]
+
+
+SELECT = {'setosa', 'versicolor'}
+
+
+def sumif(features, labels):
+    suma = 0
+    if labels in SELECT:
+        suma += sum(features)
+    return suma
+
+
+

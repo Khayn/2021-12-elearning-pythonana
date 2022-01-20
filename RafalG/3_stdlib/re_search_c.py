@@ -54,7 +54,7 @@ TEXT = ("Apollo 11 was the spaceflight that first landed humans on the Moon. "
 
 
 # str: Pattern for searching time with timezone in 24 format, i.e. '23:59 UTC'
-pattern = ...
+pattern = r"\d{2}:\d{2} UTC"
 
 # re.Match: use re.search() to find pattern in TEXT, get result text
-result = ...
+result = re.search(pattern, TEXT).group()

@@ -36,3 +36,17 @@ Tests:
 class Person:
     def __init__(self, name):
         self.name = name
+
+
+class Astronaut(Person):
+    def __init__(self, name, mission):
+        self.name = name
+        self.mission = mission
+
+    def show(self):
+        return f'{self.name}, {self.mission}'
+
+
+
+
+

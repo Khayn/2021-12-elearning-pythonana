@@ -48,3 +48,13 @@ class SpaceAgency:
 
 watney = Astronaut()
 nasa = SpaceAgency()
+
+watney.lastname = 'Watney'
+watney.nationality = 'USA'
+watney.bornDate = '1969-07-21'
+
+nasa.name = 'NASA'
+nasa.country = 'USA'
+nasa.date = '1958-07-29'
+
+print(watney.__dict__)

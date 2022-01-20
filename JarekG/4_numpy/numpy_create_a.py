@@ -32,4 +32,4 @@ Tests:
 import numpy as np
 
 
-result = ...
+result = np.arange(0., 100, 2)

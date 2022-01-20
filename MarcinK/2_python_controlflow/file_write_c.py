@@ -31,3 +31,8 @@ Tests:
 
 FILE = '_temporary.txt'
 DATA = ['hello', 'world']
+
+with open(FILE, mode='wt') as file:
+    DATA = '\n'.join(DATA) + '\n'
+    file.write(DATA)
+

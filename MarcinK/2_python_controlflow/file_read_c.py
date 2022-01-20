@@ -91,3 +91,16 @@ labels = []
 
 with open(FILE, mode='w') as file:
     file.write(DATA)
+
+with open(FILE) as file:
+    result = file.read().splitlines()
+
+
+header, *data = result
+header = header.split(',')
+
+for line in data:
+    *X,y = line.split(',')
+    X = map(float, X)
+    features.append(tuple(X))
+    labels.append(y)

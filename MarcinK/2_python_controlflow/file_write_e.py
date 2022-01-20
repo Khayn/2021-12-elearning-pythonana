@@ -36,3 +36,9 @@ DATA = [
     ('5.1', '3.5', '1.4', '0.2'),
     ('5.7', '2.8', '4.1', '1.3'),
 ]
+
+data = '\n'.join(','.join(data) for data in DATA) + '\n'
+print(data)
+
+with open(FILE, mode='wt') as file:
+    file.write(data)

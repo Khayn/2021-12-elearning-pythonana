@@ -52,6 +52,6 @@ DATA = np.array([[1, 2, 3],
                  [7, 8, 9]])
 
 
-result_ravel = ...
-result_flatten = ...
-result_reshape = ...
+result_ravel = DATA.ravel()
+result_flatten = DATA.flatten()
+result_reshape = DATA.reshape((1, 9))

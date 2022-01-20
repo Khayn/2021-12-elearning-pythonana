@@ -34,3 +34,12 @@ class Venus:
 
 class Mars:
     pass
+
+
+class Woman(Venus):
+    pass
+
+
+class Man(Mars):
+    pass
+
