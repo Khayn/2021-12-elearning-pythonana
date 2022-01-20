@@ -57,6 +57,6 @@ DATA = np.array([0.5488135 , 0.71518937, 0.60276338, 0.54488318, 0.4236548 ,
                  0.0871293 , 0.0202184 , 0.83261985, 0.77815675, 0.87001215,
                  0.97861834])
 
-result_ceil = ...
-result_floor = ...
-result_round = ...
+result_ceil = np.ceil(DATA)
+result_floor = np.floor(DATA)
+result_round = np.round(DATA)

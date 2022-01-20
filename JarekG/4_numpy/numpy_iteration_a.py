@@ -39,4 +39,4 @@ DATA = np.array([[1, 2, 3],
                  [7, 8, 9]])
 
 
-result = ...
+result = [x.astype(np.int64) for x in DATA.flat if x % 2 == 0]

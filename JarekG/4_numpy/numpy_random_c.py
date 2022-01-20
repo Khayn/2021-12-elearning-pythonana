@@ -29,4 +29,4 @@ Tests:
 import numpy as np
 np.random.seed(0)
 
-result = ...
+result = np.random.choice(np.array(range(1, 50)), size=6, replace=False)

@@ -51,4 +51,9 @@ DATA = np.array([
     [7, 8, 9]
 ])
 
-result = ...
+result = np.zeros(shape=(2, 2))
+result[0, 0] = DATA[0, 2]
+result[0, 1] = DATA[2, 2]
+result[1, 0] = DATA[0, 0]
+result[1, 1] = DATA[1, 0]
+

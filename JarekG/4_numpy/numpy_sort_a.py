@@ -48,5 +48,6 @@ DATA = np.array([[44, 47, 64, 67],
                  [67,  9, 83, 21],
                  [36, 87, 70, 88]])
 
-result_sort = ...
-result_flip = ...
+result_sort = DATA.copy()
+result_sort.sort()
+result_flip = np.flip(DATA, axis=0)

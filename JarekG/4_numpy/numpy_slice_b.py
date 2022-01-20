@@ -48,4 +48,12 @@ DATA = np.array([[5, 0, 3, 3, 7, 9, 3, 5, 2, 4, 7, 6, 8, 8, 1, 6],
                  [1, 5, 8, 4, 0, 2, 5, 5, 0, 8, 1, 1, 0, 3, 8, 8],
                  [4, 4, 0, 9, 3, 7, 3, 2, 1, 1, 2, 1, 4, 2, 5, 5]])
 
-result = ...
+row, col = DATA.shape
+row_center = row // 2
+col_center = col // 2
+half_size = 2
+
+result = DATA[
+         row_center - half_size:row_center + half_size,
+         col_center - half_size:col_center + half_size
+         ]
