@@ -42,4 +42,8 @@ DATA = np.array([[44, 47, 64, 67],
                  [36, 87, 70, 88]])
 
 
-result = ...
+result = DATA.reshape(3, 4)
+result[:, -1] = 0
+result = result.transpose()
+result = result.astype(np.float64)
+result[0] = np.nan

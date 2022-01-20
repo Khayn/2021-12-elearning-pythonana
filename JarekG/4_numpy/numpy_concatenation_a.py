@@ -35,4 +35,4 @@ a = np.array([1, 2, 3])
 b = np.array([4, 5, 6])
 
 # np.ndarray: Concatenate `a` and `b` and reshape as 2 by 3
-result = ...
+result = np.concatenate((a, b)).reshape(2, 3)
