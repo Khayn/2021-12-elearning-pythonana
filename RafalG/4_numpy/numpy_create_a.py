@@ -32,4 +32,6 @@ Tests:
 import numpy as np
 
 
-result = ...
+# result = np.array([float(x) for x in range(0,100, 2)])
+# result = np.arange(0,100,2, dtype=float)
+result = np.arange(0.0, 100.0, 2)

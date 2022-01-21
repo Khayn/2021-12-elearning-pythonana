@@ -30,5 +30,5 @@ Tests:
 import numpy as np
 np.random.seed(0)
 
-
-result = ...
+# result = np.random.random(10)
+result = np.random.rand(10)

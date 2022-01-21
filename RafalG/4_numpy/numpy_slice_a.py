@@ -35,5 +35,5 @@ DATA = np.array([
     [1, 0, 6, 0],
 ])
 
-
-result = ...
+# result = DATA[[1, 2], 1:3]
+result = DATA[1:3, 1:3]

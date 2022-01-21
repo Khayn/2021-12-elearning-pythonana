@@ -48,4 +48,5 @@ DATA = np.array([[44, 47, 64],
                  [65, 39, 87],
                  [46, 88, 81]])
 
-result = ...
+result = DATA
+result[:, 0] = DATA[:, 0].clip(50, 80)
