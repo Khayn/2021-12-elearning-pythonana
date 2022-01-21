@@ -31,4 +31,4 @@ import numpy as np
 np.random.seed(0)
 
 
-result = ...
+result = np.random.random(size=10)

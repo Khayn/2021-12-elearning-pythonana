@@ -45,4 +45,8 @@ import numpy as np
 np.random.seed(0)
 
 
-result = ...
+# result = np.array(
+#         [[np.random.randint(0, 10) for _ in range(16)] for _ in range(16)]
+#     )
+
+result = np.random.randint(0, 10, size=(16, 16))
