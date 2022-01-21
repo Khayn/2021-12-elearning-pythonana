@@ -38,4 +38,13 @@ DATA = ['1961-04-12 06:07',
         '1961-04-12 06:07:00']
 
 # list[datetime]: parsed DATA
-result = ...
+result = []
+
+for date in DATA:
+        result.append(datetime.fromisoformat(date))
+        print(result)
+
+result2 = []
+
+[result2.append(datetime.fromisoformat(date)) for date in DATA ]
+print(result2)

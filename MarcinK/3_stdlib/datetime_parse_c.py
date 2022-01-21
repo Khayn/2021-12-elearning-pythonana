@@ -41,4 +41,21 @@ DATA = [
 ]
 
 # list[datetime]: parsed DATA
-result = ...
+
+result = []
+formaty = ('%b %d, %Y %H:%M:%S', '%B %d, %Y %H:%M')
+
+
+for format in formaty:
+
+    for date in DATA:
+
+        try:
+            result.append(datetime.strptime(date, format))
+
+        except:
+            pass
+
+
+
+print(result)

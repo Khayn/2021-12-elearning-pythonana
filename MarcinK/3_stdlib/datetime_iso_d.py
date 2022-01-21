@@ -163,4 +163,35 @@ DATA = """1969-07-14, 21:00:00, INFO, Terminal countdown started
 1969-07-24, 17:29, INFO, Crew egress"""
 
 # list[dict]: representation of DATA; dict keys: when, level, message
-result = ...
+result = []
+
+for row in DATA.splitlines():
+    row = row.strip()
+
+    date, time, level, message = row.split(',', maxsplit=3)
+    dt = datetime.fromisoformat(date + time)
+
+    result.append({
+        'when': dt,
+        'level': level,
+        'message': message})
+
+
+#[time.append(datetime.fromisoformat(row[0] + row[1])) for row in dataList]
+#[level.append(row[2]) for row in dataList]
+#[message.append(row[3]) for row in dataList]
+
+#dataList = list(zip(time, level, message))
+
+#time = [{'when': time} for time in time ]
+#level = [{'level': level} for level in level ]
+#message = [{'message': message} for message in message ]
+
+
+
+print(result)
+
+
+
+
+

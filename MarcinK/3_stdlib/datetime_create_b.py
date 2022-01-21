@@ -38,4 +38,6 @@ d = date(1961, 4, 12)
 t = time(6, 7)
 
 # datetime: combine d and t to represent April 12th, 1961 6:07 a.m.
-result = ...
+result = datetime.combine(d, t)
+
+

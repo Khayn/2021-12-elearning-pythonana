@@ -43,4 +43,21 @@ DATA = [
 ]
 
 # list[datetime]: DATA elements in datetime format
-result = ...
+result = []
+formaty = ('%b %d, %Y %H:%M:%S', '%B %d, %Y %H:%M', '%B %d, %Y %H:%M:%S')
+
+
+
+for format in formaty:
+
+    for date in DATA:
+
+        try:
+            result.append(datetime.strptime(date, format))
+
+        except:
+            pass
+
+
+
+print(result)

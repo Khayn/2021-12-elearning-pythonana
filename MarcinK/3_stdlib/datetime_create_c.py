@@ -39,10 +39,10 @@ from datetime import date, datetime, time
 
 
 # datetime: representing current moment
-dt = ...
+dt = datetime.now()
 
 # date: representing current moment
-d = ...
+d = dt.date()
 
 # time: representing current moment
-t = ...
+t = dt.time()
