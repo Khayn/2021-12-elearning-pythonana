@@ -56,4 +56,23 @@ with open(FILE, mode='w') as file:
     file.write(DATA)
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+
+data = []
+with open(FILE, mode='rt') as file:
+    dane = csv.reader(file)
+
+    for line in dane:
+        data.append(tuple(line))
+
+result = []
+
+for row in data:
+    params = []
+    for col in row:
+        try:
+            params.append(SPECIES.get(int(col)))
+        except:
+            params.append(col)
+    result.append(tuple(params))
+
+print(result)

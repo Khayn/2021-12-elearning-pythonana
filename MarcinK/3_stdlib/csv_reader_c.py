@@ -52,4 +52,36 @@ with open(FILE, mode='w') as file:
     file.write(DATA)
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+data = []
+with open(FILE, mode='rt') as file:
+    dane = csv.reader(file)
+
+    for line in dane:
+        data.append(tuple(line))
+
+## rozdzielenie hedera od reszty danych
+header, *features = data
+
+
+## wygenerowanie label encodera
+value = 0
+LABEL_ENCODER = {}
+
+for k in header:
+    if k.isnumeric():
+        pass
+    else:
+        LABEL_ENCODER[value] = k
+        value += 1
+
+result = []
+i = 0
+
+## podmiana ostatniej pozycji w features
+for *params, label in features:
+
+    params.append(LABEL_ENCODER.get(int(label)))
+    result.append(tuple(params))
+
+
+print(result)
