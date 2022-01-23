@@ -65,7 +65,7 @@ def mul_ab(a, b):
 
 # callable: Multiply `a` and `b` using matrix multiplication
 def matmul_ab(a, b):
-    return np.multiply(a, b)
+    return a @ b
 
 # callable: Multiply `b` and `a` using scalar multiplication
 def mul_ba(b, a):
@@ -73,4 +73,4 @@ def mul_ba(b, a):
 
 # callable: Multiply `b` and `a` using matrix multiplication
 def matmul_ba(b, a):
-    return np.multiply(b, a)
+    return b @ a

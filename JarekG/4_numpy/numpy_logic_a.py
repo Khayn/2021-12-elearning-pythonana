@@ -40,7 +40,6 @@ import numpy as np
 np.random.seed(0)
 
 DATA = np.random.randint(0, 100, size=9)
-
-result = ...
-result_all = ...
-result_any = ...
+result = (DATA < 50) & (DATA % 2 == 0)
+result_all = result.all()
+result_any = result.any()
