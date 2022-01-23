@@ -40,5 +40,7 @@ Tests:
 import numpy as np
 np.random.seed(0)
 
+a = np.random.randint(0, 100, size=50)
+b = 2 ** np.arange(0, 7)
 
-result = ...
+result = np.isin(a, b)
