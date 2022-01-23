@@ -57,4 +57,11 @@ DATA = [
 ]
 
 # str: multiline string with header and `"firstname","lastname"` pairs
-result = ...
+result = '"firstname","lastname"\n'
+
+for index, row in enumerate(DATA):
+    name = ('"'+DATA[index]['firstname']+'"' + ',' + '"'+DATA[index]['lastname']+'"' + '\n')
+    result += name
+
+print(result)
+

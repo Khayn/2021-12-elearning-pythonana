@@ -48,4 +48,34 @@ DATA = """3,4,setosa,virginica,versicolor
 5.7,2.8,4.1,1.3,2"""
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+data = DATA.strip()
+data = data.splitlines()
+data = [tuple(x.split(',')) for x in data]
+
+## rozdzielenie hedera od reszty danych
+header, *features = data
+
+
+## wygenerowanie label encodera
+value = 0
+LABEL_ENCODER = {}
+
+for k in header:
+    if k.isnumeric():
+        pass
+    else:
+        LABEL_ENCODER[value] = k
+        value += 1
+
+result = []
+i = 0
+
+## podmiana ostatniej pozycji w features
+
+for *params, label in features:
+
+    params.append(LABEL_ENCODER.get(int(label)))
+    result.append(tuple(params))
+
+
+print(result)

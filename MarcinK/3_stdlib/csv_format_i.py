@@ -59,4 +59,5 @@ DATA = [
 ]
 
 # str: header has unique keys from DATA, row values match header columns
-result = ...
+header = DATA[0]
+print(header)
