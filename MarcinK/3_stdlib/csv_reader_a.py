@@ -54,4 +54,12 @@ with open(FILE, mode='w') as file:
     file.write(DATA)
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+
+result = []
+with open(FILE, mode='rt') as file:
+    dane = csv.reader(file)
+
+    for line in dane:
+        result.append(tuple(line))
+
+print(result)

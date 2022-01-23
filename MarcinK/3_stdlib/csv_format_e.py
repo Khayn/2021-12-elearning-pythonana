@@ -55,4 +55,20 @@ HEADER = [
 ]
 
 # list[dict[str,str]]: replace keys with `HEADER`
-result = ...
+data = DATA.strip()
+data = data.splitlines()
+data = [tuple(x.split(',')) for x in data]
+
+result = []
+
+
+for row in data:
+    dict_tmp = {}
+
+    for index, value in enumerate(row):
+        dict_tmp[HEADER[index]] = value
+
+    result.append(dict_tmp)
+
+print(result)
+

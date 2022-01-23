@@ -51,4 +51,25 @@ LABEL_ENCODER = {
     '2': 'versicolor'}
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+data = DATA.strip()
+data = data.splitlines()
+data = [tuple(x.split(',')) for x in data]
+
+header, *features = data
+
+result = []
+i = 0
+
+for *params, label in features:
+
+    params.append(LABEL_ENCODER.get(label))
+    if i == 0:
+        result.append(header)
+        result.append(tuple(params))
+        i += 1
+    else:
+        result.append(tuple(params))
+
+print(result)
+
+

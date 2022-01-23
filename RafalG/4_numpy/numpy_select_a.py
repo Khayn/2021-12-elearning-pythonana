@@ -41,6 +41,7 @@ Tests:
 
 import numpy as np
 np.random.seed(0)
-
-
-result = ...
+a = np.random.randint(0, 1025, size=(50, 50))
+b = 2 ** np.arange(11)
+result = a[np.isin(a, b)]
+result = np.flip(np.sort(result))

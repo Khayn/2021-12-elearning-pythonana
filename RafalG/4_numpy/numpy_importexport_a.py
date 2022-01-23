@@ -69,6 +69,6 @@ import numpy as np
 
 DATA = 'https://python.astrotech.io/_static/iris-dirty.csv'
 
-species = ...
-features = ...
-labels = ...
+species = np.loadtxt(DATA, max_rows=1, delimiter=",", dtype=str, usecols=(2, 3, 4))
+features = np.loadtxt(DATA, skiprows=1, delimiter=",",dtype=float, usecols=(0, 1, 2, 3))
+labels = np.loadtxt(DATA, skiprows=1, delimiter=",", dtype=int, usecols=4)

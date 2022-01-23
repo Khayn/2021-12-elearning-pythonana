@@ -51,4 +51,22 @@ DATA = """sepal_length,sepal_width,petal_length,petal_width,species
 5.7,2.8,4.1,1.3,versicolor"""
 
 # list[dict]: replace fieldnames with `FIELDNAMES`
-result = ...
+data = DATA.strip()
+data = data.splitlines()
+data = [tuple(x.split(',')) for x in data]
+
+header, *features = data
+
+
+result = []
+
+for row in features:
+    dict_tmp = {}
+
+    for index, value in enumerate(row):
+        dict_tmp[header[index]] = value
+
+    result.append(dict_tmp)
+
+print(result)
+

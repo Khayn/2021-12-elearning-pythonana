@@ -59,4 +59,44 @@ DATA = [
 ]
 
 # str: header has unique keys from DATA, row values match header columns
-result = ...
+header = []
+
+for row in DATA:
+    for col in row:
+        if col not in header:
+            header.append(col)
+
+header = sorted(header)
+
+tmp = ''
+id = 0
+for idx in header:
+    id += 1
+    if id < 5:
+        tmp += '"' + idx + '"' + ','
+    else:
+        tmp += '"' + idx + '"' + '\n'
+
+
+#"Petal length","Petal width","Sepal length","Sepal width","Species"
+
+for row in DATA:
+    for index in range(0,5):
+        value = row.get(header[index], '')
+        if index <4:
+            tmp += '"' + str(value) + '"' + ','
+        else:
+            tmp += '"' + str(value) + '"'
+    tmp += '\n'
+
+
+result = tmp
+print(result)
+
+
+
+
+
+
+
+
