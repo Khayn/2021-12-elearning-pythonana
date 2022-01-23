@@ -52,10 +52,13 @@ import numpy as np
 
 
 def trigonometry(angle_deg):
+    angle_rad=np.radians(angle_deg)
     return {
-        'rad': ...,
-        'sin': ...,
-        'cos': ...,
-        'tan': ...,
-        'ctg': ...,
+        'rad': np.radians(angle_deg),
+        'sin': np.sin(angle_rad),
+        'cos': np.cos(angle_rad),
+        # 'tan': np.tan(angle_rad) if angle_deg != 180 else np.inf,  # w testach to rozwiązanie jako prawidłowe
+        'tan': np.tan(angle_rad) if angle_deg != 90 else np.inf,  # w rzeczywistości tan = inf dla 90
+        # 'ctg': 1 / np.tan(angle_rad) if angle_deg != 90 else np.inf,  # w testach to rozwiązanie jako prawidłowe
+        'ctg': 1 / np.tan(angle_rad) if angle_deg not in (0, 180) else np.inf,  # w rzeczywistości ctg = inf dla 0 i 180
     }
