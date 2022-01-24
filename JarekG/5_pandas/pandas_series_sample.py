@@ -92,13 +92,13 @@ np.random.seed(0)
 
 rand_numbers = np.random.normal(size=100)
 days = pd.date_range(start='2000-01-01', periods=100)
-rand_numbers.index = days
+data = pd.Series(data=rand_numbers, index=days)
 
 result = {
-    'head': ...,
-    'tail': ...,
-    'first': ...,
-    'last': ...,
-    'sample_n': ...,
-    'sample_frac': ...,
+    'head': data.head(1),
+    'tail': data.tail(),
+    'first': data.first('2W'),
+    'last': data.last('1M'),
+    'sample_n': data.sample(n=3),
+    'sample_frac': data.sample(frac=1.25, replace=True),
 }
