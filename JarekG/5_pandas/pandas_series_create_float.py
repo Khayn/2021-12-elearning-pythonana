@@ -34,4 +34,4 @@ Tests:
 import pandas as pd
 
 
-result = ...
+result = pd.Series([1.0, 2.2, None, 3.4])

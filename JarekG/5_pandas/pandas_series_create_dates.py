@@ -47,5 +47,11 @@ Tests:
 
 import pandas as pd
 
+gagarin = pd.Timestamp('1961-04-12')
+armstrong = pd.Timestamp('1969-07-21')
 
-result = ...
+result = pd.Series(pd.date_range(
+    start=gagarin,
+    end=armstrong,
+    freq='D'
+))

@@ -33,4 +33,4 @@ DATA = 'https://python.astrotech.io/_static/iris.json'
 
 
 # pd.DataFrame: read DATA from JSON
-result = ...
+result = pd.read_json(DATA)

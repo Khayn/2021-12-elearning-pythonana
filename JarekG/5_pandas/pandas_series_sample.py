@@ -90,6 +90,10 @@ import pandas as pd
 import numpy as np
 np.random.seed(0)
 
+rand_numbers = np.random.normal(size=100)
+days = pd.date_range(start='2000-01-01', periods=100)
+rand_numbers.index = days
+
 result = {
     'head': ...,
     'tail': ...,

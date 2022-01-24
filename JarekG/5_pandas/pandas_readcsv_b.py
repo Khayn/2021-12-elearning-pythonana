@@ -68,4 +68,8 @@ COLUMNS = ['mean radius', 'mean texture', 'mean perimeter', 'mean area',
 
 
 # pd.DataFrame: read DATA, substitute column names, and labels, select 25 rows
-result = ...
+header = pd.read_csv(DATA, nrows=0)
+nrows, ncols, *labels = header.columns
+label_encoder = dict(enumerate(labels))
+result = pd.read_csv(DATA, skiprows=1, names=COLUMNS, nrows=25)
+result['label'].replace(label_encoder, inplace=True)
