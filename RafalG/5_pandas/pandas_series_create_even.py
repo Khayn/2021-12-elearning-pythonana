@@ -38,5 +38,6 @@ import pandas as pd
 import numpy as np
 np.random.seed(0)
 
-
-result = ...
+data = np.arange(0, 20, 2, dtype=np.int64)
+result = pd.Series(data)
+# result = pd.Series([x for x in range(0, 20) if x % 2 == 0])
