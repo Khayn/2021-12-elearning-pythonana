@@ -45,10 +45,10 @@ DATA = 'https://python.astrotech.io/_static/openapi.json'
 
 
 # requests.models.Response: result of `requests.get()` for `DATA`
-resp = ...
+resp = requests.get(DATA)
 
 # dict: conversion of `resp` by calling `.json()` on `resp`
-data = ...
+data = resp.json()
 
 # pd.DataFrame: read DATA
-result = ...
+result = pd.DataFrame(data["paths"])

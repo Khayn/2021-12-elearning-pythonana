@@ -47,5 +47,7 @@ Tests:
 
 import pandas as pd
 
+gagarin_flown = "1961-04-12"
+armstrong_set_foot = "1969-07-21"
 
-result = ...
+result = pd.Series(pd.date_range(start=gagarin_flown, end=armstrong_set_foot, freq="D"))
