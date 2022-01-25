@@ -54,4 +54,9 @@ np.random.seed(0)
 
 NUMBER = 100
 
-result = ...
+data = pd.Series(
+    data=np.random.normal(size=NUMBER),
+    index=pd.date_range(start='2000-01-01', periods=NUMBER)
+)
+
+result = data['2000-02-14': data.index[0] + pd.offsets.MonthEnd(2)]

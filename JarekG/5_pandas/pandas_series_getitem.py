@@ -51,10 +51,15 @@ import pandas as pd
 import numpy as np
 np.random.seed(0)
 
+DAYS = 100
+data = pd.Series(
+    data=np.random.normal(size=DAYS),
+    index=pd.date_range(start='2000-01-01', periods=DAYS)
+)
 
 result = {
-    '2000-02-29': ...,
-    'first': ...,
-    'last': ...,
-    'middle': ...,
+    '2000-02-29': data['2000-02-29'],
+    'first': data.first('1D').values[0],
+    'last': data.last('1D').values[0],
+    'middle': data[len(data.index)//2],
 }

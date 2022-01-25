@@ -40,12 +40,19 @@ Tests:
     dtype: int64
 """
 
-from statistics import median_low
-import pandas as pd
 import numpy as np
+import pandas as pd
+
 np.random.seed(0)
 
 
 ASCII_LOWERCASE = 'abcdefghijklmnopqrstuvwxyz'
 
-result = ...
+data = pd.Series(
+    data=np.random.randint(10, 100, size=26, dtype=np.int64),
+    index=[x for x in ASCII_LOWERCASE]
+)
+
+middle = len(data) // 2
+
+result = data[middle - 4: middle + 3]
