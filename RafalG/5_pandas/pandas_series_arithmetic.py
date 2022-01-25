@@ -41,7 +41,12 @@ Tests:
 
 import pandas as pd
 import numpy as np
+import string
 np.random.seed(0)
 
+data = np.random.random_integers(0, 9, 5)
+letters = list(string.ascii_letters[:5])
 
-result = ...
+s = pd.Series(data, letters, dtype="int64")
+s *= 10
+result = s * s

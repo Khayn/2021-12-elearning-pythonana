@@ -66,8 +66,33 @@ DATA = ['ul.Mieszka II',
         ' Jana 3 Sobieskiego  ',
         'Jana III Sobi  eskiego ']
 
+
 def clean(text: str) -> str:
-    pass
+    text = text.strip()
+    # Common format
+    text = text.upper()
+    # Remove unwanted whitespaces
+    text = text.replace('\n', '')
+    text = text.replace('\t', '')
+    text = text.replace('     ', '')
+    text = text.replace('    ', '')
+    text = text.replace('   ', '')
+    text = text.replace('  ', '')
+    # Remove unwanted special characters
+    text = text.replace('.', '')
+    text = text.replace(',', '')
+    text = text.replace('-', '')
+    text = text.replace('|', '')
+    # Remove unwanted text
+    text = text.replace('ULICA', '')
+    text = text.replace('UL', '')
+    text = text.replace('TRZECIEGO', 'III')
+    text = text.replace('3', 'III')
+    # Formatting
+    text = text.title()
+    text = text.replace('Iii', 'III')
+    text = text.replace('Ii', 'II')
+    return text
 
 
-result = ...
+result = pd.Series(DATA).apply(clean)

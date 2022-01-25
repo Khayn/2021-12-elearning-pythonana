@@ -43,9 +43,15 @@ Tests:
 from statistics import median_low
 import pandas as pd
 import numpy as np
+# import string
 np.random.seed(0)
 
-
+data = np.random.randint(10, 100, size=26)
 ASCII_LOWERCASE = 'abcdefghijklmnopqrstuvwxyz'
 
-result = ...
+letters = list(ASCII_LOWERCASE)
+middle_value = median_low(letters)
+position = letters.index(middle_value)
+
+s = pd.Series(data, letters, dtype="int64")
+result = s[position-3:position+4]

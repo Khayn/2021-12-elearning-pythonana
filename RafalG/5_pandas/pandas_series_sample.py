@@ -90,11 +90,15 @@ import pandas as pd
 import numpy as np
 np.random.seed(0)
 
+data = np.random.randn(100)
+index = pd.date_range("2000", periods=100, freq="D")
+table = pd.Series(data, index)
+
 result = {
-    'head': ...,
-    'tail': ...,
-    'first': ...,
-    'last': ...,
-    'sample_n': ...,
-    'sample_frac': ...,
+    'head': table.head(n=1),
+    'tail': table.tail(n=5),
+    'first': table.first("2W"),
+    'last': table.last("M"),
+    'sample_n': table.sample(n=3),
+    'sample_frac': table.sample(frac=1.25, replace=True),
 }

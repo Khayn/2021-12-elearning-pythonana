@@ -51,10 +51,13 @@ import pandas as pd
 import numpy as np
 np.random.seed(0)
 
+data = np.random.randn(100)
+index = pd.date_range("2000", periods=100, freq="D")
+s = pd.Series(data, index)
 
 result = {
-    '2000-02-29': ...,
-    'first': ...,
-    'last': ...,
-    'middle': ...,
+    '2000-02-29': s["2000-02-29"],
+    'first': s[0],
+    'last': s[-1],
+    'middle': s[s.size // 2],
 }
