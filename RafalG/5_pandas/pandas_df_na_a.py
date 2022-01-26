@@ -47,7 +47,7 @@ Tests:
 """
 
 import pandas as pd
-import numpy as np
+# import numpy as np
 
 
 DATA = 'https://python.astrotech.io/_static/iris-dirty.csv'
@@ -58,4 +58,14 @@ COLUMNS = [
     'Petal width',
     'Species']
 
-result = ...
+df = pd.read_csv(DATA)
+class_labels = df.columns[2:]
+label_encoder = dict(enumerate(class_labels))
+df.columns = COLUMNS
+df["Species"] = df["Species"].replace(label_encoder)
+
+df.loc[df["Petal length"] < 4, "Petal length"] = pd.NA
+df = df.interpolate("linear")
+df = df.dropna()
+
+result = df.head(n=2)
