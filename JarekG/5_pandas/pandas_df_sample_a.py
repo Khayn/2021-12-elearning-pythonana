@@ -48,4 +48,7 @@ np.random.seed(0)
 
 DATA = 'https://python.astrotech.io/_static/astro-database.csv'
 
-result = ...
+result = pd.read_csv(DATA)
+result = result.sample(frac=1)
+result.reset_index(drop=True, inplace=True)
+result = result.tail(10)

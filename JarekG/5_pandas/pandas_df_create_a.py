@@ -48,5 +48,16 @@ import pandas as pd
 "Backup", "CMP", "Fred Haise"
 """
 
+data = """"Prime", "CDR", "Neil Armstrong"
+"Prime", "LMP", "Buzz Aldrin"
+"Prime", "CMP", "Michael Collins"
+"Backup", "CDR", "James Lovell"
+"Backup", "LMP", "William Anders"
+"Backup", "CMP", "Fred Haise" """
 
-result = ...
+data = data.replace('"', '')
+columns = ['Crew', 'Role', 'Astronaut']
+result = pd.DataFrame(
+    [x.split(',') for x in data.splitlines()],
+    columns=columns
+)
