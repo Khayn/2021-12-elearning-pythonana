@@ -61,4 +61,7 @@ MONTHS_PLEN = {'styczeń': 'January',
                'listopad': 'November',
                'grudzień': 'December'}
 
-result = ...
+df = pd.read_csv(DATA, index_col=0)
+df["Mission Date"] = df["Mission Date"].replace(regex=MONTHS_PLEN).apply(pd.to_datetime)
+
+result = df
