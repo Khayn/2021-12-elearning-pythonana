@@ -58,4 +58,17 @@ LETTERS_PLEN = {'ą': 'a', 'ć': 'c', 'ę': 'e',
                 'ł': 'l', 'ń': 'n', 'ó': 'o',
                 'ś': 's', 'ż': 'z', 'ź': 'z'}
 
-result = ...
+LETTERS_PLEN.update({key.upper(): value.upper()
+                     for key, value in LETTERS_PLEN.items()})
+
+
+# def replace_letters(text):
+#     return "".join(LETTERS_PLEN.get(x, x) for x in text)
+
+
+df = pd.read_excel(io=DATA, sheet_name='Polish', header=1, index_col=0, engine="openpyxl")
+# df = df.applymap(substitute)
+df = df.replace(LETTERS_PLEN, regex=True)  # in DataFrame
+# df.columns = df.columns.map(replace_letters)  # in columns' names
+df.columns = df.columns.map(lambda text: "".join(LETTERS_PLEN.get(x, x) for x in text))
+result = df
