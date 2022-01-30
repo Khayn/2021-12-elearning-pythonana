@@ -52,4 +52,9 @@ number = input('What is your number?: ')
 
 # bool: Whether input number is even or odd (modulo divide)
 num = int(number) % 2
-result = num == 0
+# result = num == 0
+res_dict = {
+    0 : True,
+}
+result = res_dict.get(num, False)
+print(result)
