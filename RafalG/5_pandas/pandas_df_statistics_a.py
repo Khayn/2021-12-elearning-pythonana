@@ -12,7 +12,7 @@ Polish:
     1. Ustaw ziarno losowości na zero
     2. Stwórz `df: pd.DataFrame` z 50 wierszami:
         a. kolumna `mileage` - losowe `int` [0, 200_000)
-        b. kolumna `consumption` - losowe `int` [0, 20)
+        b. kolumna `consumption` - losowe `int` [0, 20]
     3. Dodaj kolumnę `status` o wartościach:
         a. `old` jeżeli `mileage` powyżej 100_000 km
         b. `young` jeżeli `mileage` od 10_000 km do 50_000 km
@@ -66,4 +66,23 @@ df = pd.DataFrame({
     'consumption': np.random.randint(0, 21, size=50),
 })
 
-result = ...
+old = df["mileage"] > 100_000
+young = df["mileage"].between(10_000, 50_000, inclusive="both")
+new = df["mileage"].between(0, 10_000, inclusive="both")
+
+df["status"] = pd.NA  # column fill in 0
+df.loc[old, "status"] = "old"
+df.loc[young, "status"] = "young"
+df.loc[new, "status"] = "new"
+
+df['type'] = pd.cut(df['consumption'],
+                    bins=[0, 1, 10, np.inf],  # sequence of scalars
+                    # bins=pd.IntervalIndex.from_tuples([(0, 1), (2, 10), (11, np.inf)]),
+                    labels=['electric', 'car', 'tir'],
+                    include_lowest=True)
+
+result = df.describe()
+
+# plot = df.hist(rwidth=0.8, figsize=(17, 5))
+# df.groupby(['type', 'status']).describe()
+# df.groupby(['type', 'status']).describe().transpose()
