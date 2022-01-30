@@ -66,4 +66,16 @@ df = pd.DataFrame({
     'consumption': np.random.randint(0, 21, size=50),
 })
 
+
+def status(miles):
+    if miles > 100_000:
+        return 'old'
+    if miles < 10_000:
+        return 'new'
+    return 'young'
+
+
+df['status'] = df['mileage'].map(status)
+a = pd.cut(df['consumption'], [0, 2, 11, 100])
+
 result = ...
