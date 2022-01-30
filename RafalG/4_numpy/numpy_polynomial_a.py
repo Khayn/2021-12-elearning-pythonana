@@ -38,5 +38,7 @@ DATA = [('x', 'y'),
         (2.0, 0.0),
         (3.0, 7.0)]
 
-
-result = ...
+data = np.array(DATA[1:])
+x = data[:, 0]
+y = data[:, 1]
+result = np.polyfit(x, y, 3)

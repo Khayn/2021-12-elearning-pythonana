@@ -92,6 +92,7 @@ for *X, y in data:
     if y not in tmp:
         tmp[y] = i
         i += 1
+        print(tmp)
 
     labels.append(tmp[y])
     features.append(tuple(X))

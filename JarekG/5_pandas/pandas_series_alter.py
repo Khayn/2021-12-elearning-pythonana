@@ -37,4 +37,7 @@ import pandas as pd
 
 DATA = [1, None, 5, None, 1, 2, 1]
 
-result = ...
+result = pd.Series(DATA)
+result.drop(labels=[2, 4, 6], inplace=True)
+result.drop_duplicates(inplace=True)
+result.reset_index(drop=True, inplace=True)

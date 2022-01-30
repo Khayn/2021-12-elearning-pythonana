@@ -53,5 +53,8 @@ import numpy as np
 np.random.seed(0)
 
 NUMBER = 100
+data = np.random.randn(NUMBER)
+index = pd.date_range("2000", periods=NUMBER, freq="D")
+s = pd.Series(data, index)
 
-result = ...
+result = s["2000-02-14":"2000-02"]

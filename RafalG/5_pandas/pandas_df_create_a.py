@@ -49,4 +49,11 @@ import pandas as pd
 """
 
 
-result = ...
+result = pd.DataFrame([
+    {"Crew": "Prime", "Role": "CDR", "Astronaut": "Neil Armstrong"},
+    {"Crew": "Prime", "Role": "LMP", "Astronaut": "Buzz Aldrin"},
+    {"Crew": "Prime", "Role": "CMP", "Astronaut": "Michael Collins"},
+    {"Crew": "Backup", "Role":  "CDR", "Astronaut":  "James Lovell"},
+    {"Crew": "Backup", "Role":  "LMP", "Astronaut":  "William Anders"},
+    {"Crew": "Backup", "Role":  "CMP", "Astronaut":  "Fred Haise"},
+])

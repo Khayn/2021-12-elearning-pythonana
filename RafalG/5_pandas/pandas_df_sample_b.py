@@ -54,4 +54,9 @@ np.random.seed(0)
 
 DATA = 'https://python.astrotech.io/_static/astro-order.csv'
 
-result = ...
+df = pd.read_csv(DATA)
+df["Order"] = df["Order"].ffill()
+df["Order"] = df["Order"].astype("int")
+df = df.sample(frac=1.0)
+
+result = df.reset_index(drop=True)

@@ -33,4 +33,6 @@ from datetime import datetime
 DATA = 'July 21, 1969 2:56:15 AM'
 
 # datetime: DATA from US long format
-result = ...
+FORMAT = '%B %d, %Y %I:%M:%S %p'
+result = datetime.strptime(DATA, FORMAT)
+print(result)

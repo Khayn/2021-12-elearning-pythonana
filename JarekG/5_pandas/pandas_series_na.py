@@ -40,4 +40,7 @@ import pandas as pd
 
 DATA = [1, None, 5, None, 1, 2, 1]
 
-result = ...
+result = pd.Series(DATA)
+result.fillna(0.0, limit=1, inplace=True)
+result.dropna(inplace=True)
+result.reset_index(drop=True, inplace=True)

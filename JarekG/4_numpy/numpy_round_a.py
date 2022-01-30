@@ -37,4 +37,4 @@ DATA = np.array([0.5488135 , 0.71518937, 0.60276338, 0.54488318, 0.4236548 ,
                  0.97861834])
 
 
-result = ...
+result = np.array([np.rint(x) for x in DATA]).astype(np.int8)

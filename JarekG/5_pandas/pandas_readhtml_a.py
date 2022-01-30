@@ -43,4 +43,4 @@ DATA = 'https://python.astrotech.io/_static/european-astronaut-corps.html'
 
 
 # pd.DataFrame: read DATA, select active ESA astronauts
-result = ...
+result = pd.read_html(DATA)[0]

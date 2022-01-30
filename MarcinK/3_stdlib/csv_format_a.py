@@ -42,4 +42,12 @@ DATA = """sepal_length,sepal_width,petal_length,petal_width,species
 5.7,2.8,4.1,1.3,versicolor"""
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+
+result = DATA.strip()
+result = result.splitlines()
+result = [tuple(x.split(',')) for x in result]
+
+print(result)
+
+
+

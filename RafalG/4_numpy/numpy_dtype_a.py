@@ -47,7 +47,7 @@ DATA = np.array([[-1.1, 0.0, 1.1],
 
 
 # np.ndarray: DATA converted to int
-result_int = ...
+result_int = DATA.astype(int)
 
 # np.ndarray: DATA converted to bool
-result_bool = ...
+result_bool = DATA.astype(bool)

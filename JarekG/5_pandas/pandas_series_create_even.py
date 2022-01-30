@@ -39,4 +39,4 @@ import numpy as np
 np.random.seed(0)
 
 
-result = ...
+result = pd.Series(np.arange(20, step=2, dtype=np.int64))

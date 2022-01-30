@@ -34,4 +34,5 @@ from datetime import datetime
 DATA = 'July 21st, 1969 2:56:15 AM'
 
 # datetime: DATA from long US format with ordinals
-result = ...
+FORMAT = '%B %dst, %Y %I:%M:%S %p'
+result = datetime.strptime(DATA, FORMAT)

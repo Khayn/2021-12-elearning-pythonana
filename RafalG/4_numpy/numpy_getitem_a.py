@@ -51,4 +51,12 @@ DATA = np.array([
     [7, 8, 9]
 ])
 
-result = ...
+# result = np.array(
+#     [[DATA[0][2], DATA[2][2]],
+#     [DATA[0][0], DATA[1][0]]],
+#     dtype=float)
+
+result = np.array([
+    [DATA[0,2], DATA[2,2]],
+    [DATA[0,0], DATA[1,0]]
+], dtype=float)

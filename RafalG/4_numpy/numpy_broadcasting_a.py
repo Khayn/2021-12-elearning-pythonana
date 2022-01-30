@@ -41,14 +41,14 @@ B = np.array([2, 3], float)
 C = np.array([[1, 1], [4, 0]], float)
 
 # np.ndarray: square root of each element in `A` use np.pow()
-a = ...
+a = pow(A, 1/2)
 
 # np.ndarray: square root of each element in `B` use `**` operator
-b = ...
+b = B ** (1/2)
 
 # np.ndarray: second power (square) of each element in `C` use `**` operator
-c = ...
+c = C ** 2
 
 # np.ndarray: Add elements from `a` to `b` and then multiply by `c`
 #             Remember about the operator precedence
-result = ...
+result = (a + b) * c

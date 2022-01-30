@@ -41,4 +41,4 @@ DATA = 'https://python.astrotech.io/_static/martian-en.csv'
 
 
 # pd.DataFrame: read DATA and parse dates in "Mission Date" column
-result = ...
+result = pd.read_csv(DATA, parse_dates=["Mission Date"])

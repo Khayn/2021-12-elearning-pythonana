@@ -40,5 +40,5 @@ import numpy as np
 import pandas as pd
 np.random.seed(0)
 
-
-result = ...
+data = np.random.randint(0, 10, size=10, dtype=np.int64)
+result = pd.Series(data)

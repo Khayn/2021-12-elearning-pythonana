@@ -52,4 +52,11 @@ from math import sqrt
 
 # callable: Calculate distance between points using Euclidean algorithm
 def euclidean_distance(a, b):
-    pass
+
+    if len(a) != len(b):
+        raise ValueError("Points must be in the same dimensions")
+
+    result = 0
+    for n1, n2 in zip(a, b):
+        result += (n1-n2)**2
+    return sqrt(result)

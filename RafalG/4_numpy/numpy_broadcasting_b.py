@@ -42,5 +42,5 @@ a = np.array([[1, 0], [0, 1]])
 b = [[4, 1], [2, 2]]
 
 
-result_ab = ...
-result_ba = ...
+result_ab = a + b
+result_ba = b + a

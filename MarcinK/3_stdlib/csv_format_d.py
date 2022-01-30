@@ -45,4 +45,28 @@ DATA = """sepal_length,sepal_width,petal_length,petal_width,species
 5.7,2.8,4.1,1.3,versicolor"""
 
 # list[tuple]: data from file (note the list[tuple] format!)
-result = ...
+
+data = DATA.strip()
+data = data.splitlines()
+data = [tuple(x.split(',')) for x in data]
+
+result = []
+
+
+for row in data:
+    row_tmp = []
+    for column in row:
+
+        try:
+            row_tmp.append(float(column))
+        except:
+            row_tmp.append(column)
+
+    result.append(tuple(row_tmp))
+
+print(result)
+
+
+
+
+

@@ -58,4 +58,11 @@ COLUMNS = [
     'Petal width',
     'Species']
 
-result = ...
+data = pd.read_csv(DATA, skiprows=1)
+data.columns = COLUMNS
+data = data.replace({'Species': {0: 'setosa', 1: 'versicolor', 2: 'virginica'}})
+condition = data['Petal length'] < 4
+data.loc[condition, 'Petal length'] = np.NaN
+data.interpolate(method='linear', inplace=True)
+data = data.dropna()
+result = data.head(2)

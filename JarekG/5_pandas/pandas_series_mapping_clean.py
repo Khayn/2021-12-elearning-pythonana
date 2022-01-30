@@ -67,7 +67,15 @@ DATA = ['ul.Mieszka II',
         'Jana III Sobi  eskiego ']
 
 def clean(text: str) -> str:
-    pass
+    text = text.strip().upper()
+    text = text.replace('3', 'III').replace('.', '')
+    text = text.replace('    ', '').replace('  ', '')
+    text = text.replace('ULICA', '').replace('UL', '')
+    text = text.replace('TRZECIEGO', 'III')
+    text = text.strip().title()
+    text = text.replace('Iii', 'III').replace('Ii', 'II')
+    return text
 
 
-result = ...
+result = pd.Series(DATA)
+result = result.map(clean)

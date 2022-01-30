@@ -64,4 +64,9 @@ MONTHS_EN = ['January', 'February', 'March', 'April',
              'October', 'November', 'December']
 MONTHS = dict(enumerate(MONTHS_EN, start=1))
 
-result = ...
+df = pd.read_csv(DATA, index_col=0, parse_dates=["datetime"])
+df[["year", "month"]] = df["period"].str.split(pat="-", expand=True)
+# df["month"] = df["month"].astype("int")
+# df["month"].replace(MONTHS, inplace=True)
+df["month"] = df["month"].astype("int").replace(MONTHS)
+result = df

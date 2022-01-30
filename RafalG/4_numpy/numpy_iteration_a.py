@@ -38,5 +38,9 @@ DATA = np.array([[1, 2, 3],
                  [4, 5, 6],
                  [7, 8, 9]])
 
+# result = []
 
-result = ...
+DATA = DATA.astype(np.int64)
+
+# result = [number for row in DATA for number in row if number % 2 == 0]
+result = [number for number in DATA.flatten() if number % 2 == 0]

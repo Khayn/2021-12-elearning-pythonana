@@ -44,4 +44,8 @@ import numpy as np
 np.random.seed(0)
 
 
-result = ...
+data = np.random.randint(10, size=5)
+index = list('abcde')
+s = pd.Series(data=data, index=index, dtype=np.int64)
+s = s * 10
+result = s * s

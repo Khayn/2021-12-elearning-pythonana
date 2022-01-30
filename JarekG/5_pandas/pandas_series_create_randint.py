@@ -41,4 +41,4 @@ import pandas as pd
 np.random.seed(0)
 
 
-result = ...
+result = pd.Series(np.random.randint(10, size=10, dtype=np.int64))
