@@ -78,7 +78,7 @@ ata = 1013.25 * hPa
 pO2 = O2 * ata
 
 # float: 11.3 Pascals per meter
-gradient = ...
+gradient = ( 11.3 * Pa ) / m
 
 # float: ata minus pO2 all that divided by gradient
-altitude = ...
+altitude = round( (ata - pO2) / gradient  ,2)
