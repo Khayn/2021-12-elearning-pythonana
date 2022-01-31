@@ -90,24 +90,24 @@ Tests:
     False
 """
 
-a = bool(False)
-b = bool(True)
+a = False # bool(False)
+b = True # bool(True)
 
-c = bool(0)
-d = bool(0.0)
-e = bool(-0)
-f = bool(-0.0)
+c = False # bool(0)
+d = False # bool(0.0)
+e = False # bool(-0)
+f = False # bool(-0.0)
 
-g = bool('a')
-h = bool('.')
-i = bool('0')
-j = bool('0.0')
-k = bool('')
-l = bool(' ')
+g = True # bool('a')
+h = True # bool('.')
+i = True # bool('0')
+j = True # bool('0.0')
+k = False # bool('')
+l = True # bool(' ')
 
-m = bool(int('0'))
-n = bool(float(str(-0)))
+m = False # bool(int('0'))
+n = False # bool(float(str(-0)))
 
-o = bool(-0.0 + 0.0j)
-p = bool('-0.0+0.0j')
-q = bool(complex('-0.0+0.0j'))
+o = False # bool(-0.0 + 0.0j)
+p = True # bool('-0.0+0.0j')
+q = False # bool(complex('-0.0+0.0j'))
