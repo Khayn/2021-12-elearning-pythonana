@@ -26,4 +26,4 @@ Tests:
 """
 
 # str: Hello World
-result = ...
+result = 'Hello World'
