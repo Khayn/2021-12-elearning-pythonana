@@ -55,7 +55,7 @@ LUNAR_DAY = 453*Kelvin
 LUNAR_NIGHT = 93*Kelvin
 
 # int: 453 Kelvins in Celsius
-lunar_day = ...
+lunar_day = LUNAR_DAY - Celsius
 
 # int: 93 Kelvins in Celsius
-lunar_night = ...
+lunar_night = LUNAR_NIGHT - Celsius
