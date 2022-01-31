@@ -65,18 +65,18 @@ distance_mi = distance / mi
 distance_NM = distance / NM
 
 # str: distance in meters 0 decimal places
-meters = f'Meters: {...}'
+meters = f'Meters: {distance:.0f}'
 
 # str: distance in kilometers with 0 decimal places
-kilometers = f'Kilometers: {...}'
+kilometers = f'Kilometers: {distance_km:.0f}'
 
 # str: distance in miles with 2 decimal places
-miles = f'Miles: {...}'
+miles = f'Miles: {distance_mi:.2f}'
 
 # str: distance in nautical miles with 3 decimal places
-nautical_miles = f'Nautical Miles: {...}'
+nautical_miles = f'Nautical Miles: {distance_NM:.3f}'
 
 # str: distance in km, mi, NM with 0, 1, 2 decimal places
-all_units = (f'km: {...}, '
-             f'mi: {...}, '
-             f'NM: {...}')
+all_units = (f'km: {distance_km:.0f}, '
+             f'mi: {distance_mi:.1f}, '
+             f'NM: {distance_NM:.2f}')
