@@ -54,4 +54,6 @@ import pandas as pd
 
 DATA = 'https://python.astrotech.io/_static/phones-pl.csv'
 
-result = ...
+result = pd.read_csv(DATA, parse_dates=['datetime'])
+result['date'] = result['datetime'].dt.date
+result['time'] = result['datetime'].dt.time

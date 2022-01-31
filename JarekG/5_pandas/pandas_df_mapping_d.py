@@ -58,4 +58,6 @@ LETTERS_PLEN = {'ą': 'a', 'ć': 'c', 'ę': 'e',
                 'ł': 'l', 'ń': 'n', 'ó': 'o',
                 'ś': 's', 'ż': 'z', 'ź': 'z'}
 
-result = ...
+result = pd.read_excel(DATA, sheet_name='Polish', index_col='TRL', header=1)
+result.replace(LETTERS_PLEN, regex=True, inplace=True)
+result.columns = result.columns.map(lambda text: ''.join(LETTERS_PLEN.get(x,x) for x in text))

@@ -39,4 +39,5 @@ import pandas as pd
 
 DATA = 'https://python.astrotech.io/_static/iris-clean.csv'
 
-result = ...
+result = pd.read_csv(DATA)
+result = result[result['petal_length'] > 2].head(5)

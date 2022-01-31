@@ -61,4 +61,7 @@ MONTHS_PLEN = {'styczeń': 'January',
                'listopad': 'November',
                'grudzień': 'December'}
 
-result = ...
+result = pd.read_csv(DATA, index_col='id')
+result['Mission Date'] = (result['Mission Date']
+                          .replace(MONTHS_PLEN, regex=True)
+                          .map(pd.Timestamp))

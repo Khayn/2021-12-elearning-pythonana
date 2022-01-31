@@ -76,6 +76,6 @@ def status(miles):
 
 
 df['status'] = df['mileage'].map(status)
-a = pd.cut(df['consumption'], [0, 2, 11, 100])
+df['type'] = pd.cut(df['consumption'], [0, 2, 11, df['consumption'].max()+1])
 
-result = ...
+result = df.describe()
