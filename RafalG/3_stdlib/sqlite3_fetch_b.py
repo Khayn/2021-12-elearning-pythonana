@@ -134,4 +134,17 @@ SQL_SELECT = 'SELECT * FROM logs ORDER BY datetime DESC;'
 
 # list[tuple]: select all results from database in list[tuple] format, example:
 #     [(28, '1969-07-24 17:29:00', 'INFO', 'Crew egress'), ...]
-result = ...
+# result = ...
+data = []
+
+for line in DATA.splitlines():
+    d, t, level, content = line.strip().split(", ", 3)
+    d = date.fromisoformat(d)  # nie datetime a date
+    t = time.fromisoformat(t)  # nie datetime a time
+    dt = datetime.combine(d, t)
+    data.append((dt, level, content))
+
+with sqlite3.connect(DATABASE) as db:
+    db.execute(SQL_CREATE_TABLE)
+    db.executemany(SQL_INSERT, data)
+    result = [row for row in db.execute(SQL_SELECT)]
