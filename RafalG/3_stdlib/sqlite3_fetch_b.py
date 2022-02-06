@@ -147,4 +147,5 @@ for line in DATA.splitlines():
 with sqlite3.connect(DATABASE) as db:
     db.execute(SQL_CREATE_TABLE)
     db.executemany(SQL_INSERT, data)
-    result = [row for row in db.execute(SQL_SELECT)]
+    result = list(db.execute(SQL_SELECT))
+    # result = [row for row in db.execute(SQL_SELECT)]
