@@ -6,3 +6,5 @@ requests
 lxml
 html5lib
 scipy
+BeautifulSoup4
+ipython
