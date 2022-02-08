@@ -103,4 +103,22 @@ with open(FILE, mode='w') as file:
 #                'sepal_width': 3.9,
 #                'petal_length': 1.3,
 #                'petal_width': 0.4}, ...]
-result = ...
+# result = ...
+data = []
+with open(FILE) as file:
+    for line in file:
+        line = line.strip().split(",")
+        data.append({
+            "sepal_length": float(line[0]),
+            "sepal_width": float(line[1]),
+            "petal_length": float(line[2]),
+            "petal_width": float(line[3]),
+            "species": SPECIES.get(int(line[4]))
+        })
+
+
+with sqlite3.connect(DATABASE) as db:
+    db.execute(SQL_CREATE_TABLE)
+    db.executemany(SQL_INSERT, data)
+    db.row_factory = sqlite3.Row
+    result = [dict(element) for element in db.execute(SQL_SELECT)]

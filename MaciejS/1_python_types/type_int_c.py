@@ -70,13 +70,13 @@ USAF_SPACE = 80 * km
 IAF_SPACE = 100 * km
 
 # int: 19 kilometers in meters
-armstrong_limit = ...
+armstrong_limit = ARMSTRONG_LIMIT
 
 # int: 20 kilometers in meters
-stratosphere = ...
+stratosphere = STRATOSPHERE
 
 # int: 80 kilometers in meters
-usaf_space = ...
+usaf_space = USAF_SPACE
 
 # int: 100 kilometers in meters
-iaf_space = ...
+iaf_space = IAF_SPACE

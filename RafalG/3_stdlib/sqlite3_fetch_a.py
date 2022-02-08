@@ -82,7 +82,7 @@ Tests:
 """
 
 import sqlite3
-from datetime import date, datetime, time
+# from datetime import date, datetime, time
 
 DATABASE = ':memory:'
 
@@ -130,4 +130,9 @@ SQL_SELECT = 'SELECT * FROM logs ORDER BY datetime DESC;'
 
 # list[tuple]: select all results from database in list[tuple] format, example:
 #     [(28, '1969-07-24 17:29:00', 'INFO', 'Crew egress'), ...]
-result = ...
+# result = ...
+
+with sqlite3.connect(DATABASE) as db:
+    db.execute(SQL_CREATE_TABLE)
+    db.executemany(SQL_INSERT, DATA)
+    result = list(db.execute(SQL_SELECT))

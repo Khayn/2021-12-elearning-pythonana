@@ -67,10 +67,10 @@ MARS_MIN = -153 * Celsius
 MARS_AVG = -63 * Celsius
 
 # int: 20 Celsius in Kelvin
-mars_max = ...
+mars_max = MARS_MAX + Kelvin
 
 # int: -153 Celsius in Kelvin
-mars_min = ...
+mars_min = MARS_MIN + Kelvin
 
 # int: -63 Celsius in Kelvin
-mars_avg = ...
+mars_avg = MARS_AVG + Kelvin

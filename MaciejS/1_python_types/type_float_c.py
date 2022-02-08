@@ -43,10 +43,10 @@ liter = 1
 floz = 0.02957344 * liter
 
 # float: 20 Fl Oz
-volume = ...
+volume = 20.0
 
 # float: volume in fluid ounces
-volume_floz = ...
+volume_floz = volume
 
 # float: volume in liters
-volume_l = ...
+volume_l = volume * floz
