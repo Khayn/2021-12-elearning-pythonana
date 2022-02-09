@@ -57,4 +57,32 @@ DATA = [
 ]
 
 # list[dict]: flatten data, each mission field prefixed with mission and number
-result = ...
+# result = ...
+
+header = set()
+data = []
+
+for astronaut in DATA:
+    mission_number = 0
+    missions = astronaut.pop("missions")
+    header.update(astronaut.keys())
+
+    for mission in missions:
+        mission_number += 1
+        a = f"mission{mission_number}_name"
+        b = f"mission{mission_number}_year"
+        # header.update((f"mission{mission_number}_name", f"mission{mission_number}_year"))
+        header.update((a, b))
+
+        astronaut.update({f"mission{mission_number}_name": mission.get("name"),
+                          f"mission{mission_number}_year": mission.get("year")})
+
+    # print(astronaut)
+    data.append(astronaut)
+
+
+with open(FILE, mode='w', encoding='utf-8') as file:
+    f = csv.DictWriter(file, fieldnames=sorted(header), delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL,
+                       lineterminator='\n')
+    f.writeheader()
+    f.writerows(data)
