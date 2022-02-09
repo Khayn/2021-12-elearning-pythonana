@@ -83,7 +83,7 @@ FILE = r'_temporary.csv'
 # result = ...
 
 with open(FILE, mode="w") as file:
-    writer = csv.DictWriter(file, fieldnames=list(vars(CREW[0])), delimiter=",", quotechar='"', quoting=csv.QUOTE_ALL, lineterminator="\n")
+    writer = csv.DictWriter(file, fieldnames=sorted(vars(CREW[0])), delimiter=",", quotechar='"', quoting=csv.QUOTE_ALL, lineterminator="\n")
     # or fieldnames=CREW[0].__dict__.keys()
 
     writer.writeheader()
