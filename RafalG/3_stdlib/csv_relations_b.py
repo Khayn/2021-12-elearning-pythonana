@@ -80,4 +80,15 @@ FILE = r'_temporary.csv'
 
 
 # list[dict]: Using `csv.DictWriter()` save CREW to CSV file
-result = ...
+# result = ...
+
+with open(FILE, mode="w") as file:
+    writer = csv.DictWriter(file, fieldnames=list(vars(CREW[0])), delimiter=",", quotechar='"', quoting=csv.QUOTE_ALL, lineterminator="\n")
+    # or fieldnames=CREW[0].__dict__.keys()
+
+    writer.writeheader()
+
+    for astronaut in CREW:
+        astronaut.missions = [",".join(map(str, mission.__dict__.values())) for mission in astronaut.missions]
+        astronaut.missions = ";".join(astronaut.missions)
+        writer.writerow(astronaut.__dict__)
