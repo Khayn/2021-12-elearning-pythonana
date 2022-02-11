@@ -74,10 +74,9 @@ for astronaut in DATA:
         # header.update((f"mission{mission_number}_name", f"mission{mission_number}_year"))
         header.update((a, b))
 
-        astronaut.update({f"mission{mission_number}_name": mission.get("name"),
-                          f"mission{mission_number}_year": mission.get("year")})
+        astronaut.update({a: mission.get("name"),
+                          b: mission.get("year")})
 
-    # print(astronaut)
     data.append(astronaut)
 
 
