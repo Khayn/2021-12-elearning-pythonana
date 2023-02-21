@@ -60,16 +60,16 @@ km = 1000 * m
 mi = 1609.344 * m
 
 # float: miles per hour
-mph = ...
+mph = mi / HOUR
 
 # float: kilometers per hour
-kph = ...
+kph = km / HOUR
 
 # float: 75 miles per hour
-speed_limit = ...
+speed_limit = 75.0
 
 # float: speed limit in miles per hour, round to one decimal place
-speed_limit_mph = ...
+speed_limit_mph = 75.0
 
 # float: speed limit in kilometers per hour, round to one decimal place
-speed_limit_kph = ...
+speed_limit_kph = round (speed_limit * mph / kph,1)

@@ -51,16 +51,16 @@ Tests:
 """
 
 # bool: result must be logic True
-a = ...
+a = None
 
 # bool: result must be logic False
-b = ...
+b = None
 
 # bool: result must be logic True
-c = ...
+c = None
 
 # bool: result must be logic False
-d = ...
+d = None
 
 # Do not modify following lines
 result_a = a is None

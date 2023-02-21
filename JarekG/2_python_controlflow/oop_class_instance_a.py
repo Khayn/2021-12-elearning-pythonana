@@ -29,3 +29,8 @@ Tests:
 
 class Iris:
     pass
+
+
+setosa = Iris()
+virginica = Iris()
+versicolor = Iris()

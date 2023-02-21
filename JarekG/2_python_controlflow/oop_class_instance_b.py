@@ -35,3 +35,7 @@ class Astronaut:
 
 class SpaceAgency:
     pass
+
+
+watney = Astronaut()
+nasa = SpaceAgency()

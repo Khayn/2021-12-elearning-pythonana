@@ -54,7 +54,7 @@ MB = 1024 * kB
 SIZE = 100 * MB
 
 # int: SIZE in kilobytes
-size_kB = ...
+size_kB = SIZE // kB
 
 # int: SIZE in megabits
-size_Mb = ...
+size_Mb = SIZE // Mb

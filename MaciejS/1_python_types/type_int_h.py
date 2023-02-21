@@ -60,10 +60,10 @@ kB = 1024 * B
 MB = 1024 * kB
 
 # int: 100 megabits per second
-bandwidth = ...
+bandwidth = 100 * Mb // SECOND
 
 # int: 100 megabytes
-size = ...
+size = 100 * MB
 
 # int: size by bandwidth in seconds
-duration = ...
+duration = size // bandwidth

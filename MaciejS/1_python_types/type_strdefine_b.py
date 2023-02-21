@@ -40,4 +40,4 @@ NAME = 'José Jiménez'
 
 # result: str
 # Add whitespace and quotes to: My name... José Jiménez. I'm an astronaut!
-result = ...
+result = f"""'''My name... "{NAME}".\n\tI'm an \"\"\"astronaut!\"\"\"'''"""

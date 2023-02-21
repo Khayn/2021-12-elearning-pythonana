@@ -47,10 +47,10 @@ m = 1
 ft = 0.3048 * m
 
 # float: 10_000 ft
-altitude = ...
+altitude = 1e4 * ft
 
 # float: altitude in meters
-altitude_m = ...
+altitude_m = altitude
 
 # float: altitude in feet
-altitude_ft = ...
+altitude_ft = altitude_m / ft

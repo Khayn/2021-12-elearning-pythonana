@@ -37,3 +37,18 @@ DATA = [
 ]
 
 result = {}
+
+
+class Iris:
+    def __init__(self, features, label, *args, **kwargs):
+        self.features = features
+        self.label = label
+    
+    def sum_features(self):
+        return {self.label: sum(self.features)}
+    
+
+for line in DATA:
+    *features, label = line
+    iris = Iris(features, label)
+    result.update(iris.sum_features())

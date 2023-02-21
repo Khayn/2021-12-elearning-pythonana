@@ -7,7 +7,7 @@ exercises = {}
 
 
 for root, dirs, files in os.walk(ROOT):
-
+    
     for file in files:
         if 'venv' in root:
             continue

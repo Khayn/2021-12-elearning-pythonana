@@ -167,3 +167,146 @@
 	OOP Stringify Str - oop_stringify_a.py
 
 
+3_stdlib
+--------
+	CSV DictReader Iris - csv_dictreader_a.py
+	CSV DictWriter Fixed - csv_dictwriter_a.py
+	CSV DictWriter Objects - csv_dictwriter_c.py
+	CSV DictWriter Schemaless - csv_dictwriter_b.py
+	CSV Format ReadFixedHeader - csv_format_e.py
+	CSV Format ReadGenerateHeader - csv_format_f.py
+	CSV Format ReadLabelEncoder - csv_format_c.py
+	CSV Format ReadString - csv_format_a.py
+	CSV Format ReadSwitch - csv_format_b.py
+	CSV Format ReadTypeCast - csv_format_d.py
+	CSV Format WriteFixed - csv_format_h.py
+	CSV Format WriteListDict - csv_format_g.py
+	CSV Format WriteListDict - csv_format_k.py
+	CSV Format WriteListTuple - csv_format_j.py
+	CSV Format WriteObjects - csv_format_l.py
+	CSV Format WriteSchemaless - csv_format_i.py
+	CSV Reader Enumerate - csv_reader_c.py
+	CSV Reader Substitute - csv_reader_b.py
+	CSV Reader Syntax - csv_reader_a.py
+	CSV Reader TypeCast - csv_reader_d.py
+	CSV Relations Join - csv_relations_b.py
+	CSV Relations Nested - csv_relations_a.py
+	CSV Writer Iris - csv_writer_a.py
+	Datetime Create Combine - datetime_create_b.py
+	Datetime Create Current - datetime_create_c.py
+	Datetime Create Custom - datetime_create_a.py
+	Datetime Format LeadingZero - datetime_format_b.py
+	Datetime Format US - datetime_format_a.py
+	Datetime ISO Format - datetime_iso_a.py
+	Datetime ISO List - datetime_iso_c.py
+	Datetime ISO Logs - datetime_iso_d.py
+	Datetime ISO Parse - datetime_iso_b.py
+	Datetime Parse List - datetime_parse_c.py
+	Datetime Parse Many - datetime_parse_d.py
+	Datetime Parse Ordinals - datetime_parse_b.py
+	Datetime Parse US - datetime_parse_a.py
+	Datetime Timedelta Age - datetime_timedelta_b.py
+	Datetime Timedelta Dict - datetime_timedelta_d.py
+	Datetime Timedelta Duration - datetime_timedelta_a.py
+	Datetime Timedelta Period - datetime_timedelta_c.py
+	Datetime Timestamp Limits - datetime_timestamp_a.py
+	Datetime Timezone Pytz - datetime_timezone_a.py
+	Datetime Timezone ZoneInfo - datetime_timezone_b.py
+	JSON Decoder Martian - json_decoder_a.py
+	JSON Encoder Martian - json_encoder_a.py
+	JSON File Dump - json_file_a.py
+	JSON File Load - json_file_b.py
+	JSON Object Dataclass - json_object_b.py
+	JSON Object Factory - json_object_a.py
+	JSON String Dump - json_string_a.py
+	JSON String ListDict - json_string_c.py
+	JSON String ListTuple - json_string_d.py
+	JSON String Load - json_string_b.py
+	RE Find Dates - re_find_a.py
+	RE Match Phones - re_match_a.py
+	RE Qualifier Lazy - re_greedy_a.py
+	RE Search Astronauts - re_search_a.py
+	RE Search Datetime - re_search_d.py
+	RE Search Moon Speech - re_search_b.py
+	RE Search Time - re_search_c.py
+	RE Split Moon Speech - re_split_a.py
+	RE Standards PESEL - re_standards_a.py
+	SQLite3 Fetch CSV - sqlite3_fetch_c.py
+	SQLite3 Fetch Logs - sqlite3_fetch_a.py
+	SQLite3 Fetch Logs - sqlite3_fetch_b.py
+	SQLite3 Join Relations - sqlite3_join_a.py
+
+
+4_numpy
+-------
+	Numpy Algebra Euclidean 2D - numpy_algebra_a.py
+	Numpy Attributes - numpy_attributes_a.py
+	Numpy Broadcasting Arithmetic - numpy_broadcasting_a.py
+	Numpy Broadcasting Matmul - numpy_broadcasting_c.py
+	Numpy Broadcasting Type Cast - numpy_broadcasting_b.py
+	Numpy Concatenation - numpy_concatenation_a.py
+	Numpy Create Arange - numpy_create_a.py
+	Numpy Dtype Astype - numpy_dtype_a.py
+	Numpy Indexing - numpy_getitem_a.py
+	Numpy Iteration - numpy_iteration_a.py
+	Numpy Loadtext - numpy_importexport_a.py
+	Numpy Logic Even - numpy_logic_a.py
+	Numpy Logic Isin - numpy_logic_b.py
+	Numpy Methods - numpy_methods_a.py
+	Numpy Polyfit - numpy_polynomial_a.py
+	Numpy Random Float - numpy_random_a.py
+	Numpy Random Int - numpy_random_b.py
+	Numpy Random Sample - numpy_random_c.py
+	Numpy Round Clip - numpy_round_c.py
+	Numpy Round Floor and Ceil - numpy_round_b.py
+	Numpy Round Rint - numpy_round_a.py
+	Numpy Select Isin - numpy_select_a.py
+	Numpy Shape 1d - numpy_shape_a.py
+	Numpy Slice 1 - numpy_slice_a.py
+	Numpy Slice 2 - numpy_slice_b.py
+	Numpy Sort - numpy_sort_a.py
+	Numpy Trigonometry - numpy_trigonometry_a.py
+
+
+5_pandas
+--------
+	DataFrame Create - pandas_df_create_a.py
+	DataFrame Export CSV - pandas_tocsv_a.py
+	DataFrame Export JSON - pandas_tojson_a.py
+	DataFrame Export Pickle - pandas_topickle_a.py
+	DataFrame Export SQL - pandas_tosql_a.py
+	DataFrame Groupby Astro EVA - pandas_df_groupby_b.py
+	DataFrame Groupby Phones - pandas_df_groupby_a.py
+	DataFrame Mapping Month - pandas_df_mapping_c.py
+	DataFrame Mapping Split - pandas_df_mapping_a.py
+	DataFrame Mapping Substitute - pandas_df_mapping_d.py
+	DataFrame Mapping Translate - pandas_df_mapping_b.py
+	DataFrame NaN - pandas_df_na_a.py
+	DataFrame Plot - pandas_df_plot_a.py
+	DataFrame Sample - pandas_df_sample_a.py
+	DataFrame Sample - pandas_df_sample_b.py
+	DataFrame Select - pandas_df_select_a.py
+	DataFrame Statistics - pandas_df_statistics_a.py
+	Pandas Read CSV Dates - pandas_readcsv_a.py
+	Pandas Read CSV Replace - pandas_readcsv_b.py
+	Pandas Read HTML - pandas_readhtml_a.py
+	Pandas Read JSON - pandas_readjson_a.py
+	Pandas Read JSON OpenAPI - pandas_df_mapping_e.py
+	Pandas Read JSON OpenAPI - pandas_readjson_b.py
+	Pandas Read PythonDict - pandas_readpython_a.py
+	Pandas Read PythonObj - pandas_readpython_b.py
+	Pandas Read XSLT Plants - pandas_readxml_a.py
+	Pandas Series Attributes - pandas_series_attributes.py
+	Series Alter - pandas_series_alter.py
+	Series Arithmetic - pandas_series_arithmetic.py
+	Series Create Dates - pandas_series_create_dates.py
+	Series Create Even - pandas_series_create_even.py
+	Series Create Float - pandas_series_create_float.py
+	Series Create Randint - pandas_series_create_randint.py
+	Series Getitem - pandas_series_getitem.py
+	Series NA - pandas_series_na.py
+	Series Sample - pandas_series_sample.py
+	Series Slice Datetime - pandas_series_slice_datetime.py
+	Slicing Slice Str - pandas_series_slice_str.py
+
+

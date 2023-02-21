@@ -53,20 +53,42 @@ Tests:
           2035: Ares 3]
     Rick Martinez
 """
+# import experience as experience
 
 
 class Crew:
     def __init__(self, members=()):
         self.members = list(members)
-
+        
+    def __str__(self):
+        out_str = ''
+        for member in self.members:
+            out_str += f'{member}\n'
+        return out_str[:-1]
 
 class Astronaut:
     def __init__(self, name, experience=()):
         self.name = name
         self.experience = list(experience)
+        
+    def __str__(self):
+        if self.experience:
+            out_str = f'{self.name} veteran of ['
+            for mission in self.experience:
+                out_str += f'\n\t{mission},'
+            out_str = out_str[:-1] + ']'
+            return out_str
+        else:
+            return f'{self.name}'
 
 
 class Mission:
     def __init__(self, year, name):
         self.year = year
         self.name = name
+        
+    def __str__(self):
+        return str(f'{self.year}: {self.name}')
+    
+    def __repr__(self):
+        return f'Mission(year="{self.year}" name="{self.name}"'

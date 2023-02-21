@@ -90,3 +90,21 @@ label_encoder = {k: v for k, v in enumerate(label_encoder)}
 
 labels = [k for label in labels for k, v in label_encoder.items() if label == v]
 
+# ======== Matt solution =============
+
+
+headers, *data = DATA
+
+features = []
+labels = []
+label_encoder = {}
+
+for *X, y in data:
+    if y not in label_encoder:
+        label_encoder[y] = len(label_encoder)
+        
+    labels.append(label_encoder[y])
+    features.append(tuple(X))
+    
+label_encoder = {val: key for key, val in label_encoder.items()}
+

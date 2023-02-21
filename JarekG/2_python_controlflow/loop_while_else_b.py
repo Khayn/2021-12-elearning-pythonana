@@ -35,10 +35,12 @@ input = MagicMock(side_effect=['0', '9', '1', '8', '2', '7', '3', '6', '4'])
 HIDDEN = 4
 MAX_TRIES = 4
 
-
+loop = MAX_TRIES
 while True:
     guess = input('\nType number: ')
-
+    if not loop:
+        print('Game over, max tries achived')
+        break
     if int(guess) > HIDDEN:
         print('Above')
     elif int(guess) < HIDDEN:
@@ -46,3 +48,4 @@ while True:
     else:
         print('Exactly')
         break
+    loop -= 1
